@@ -253,3 +253,36 @@ footer {
     transform: scale(1.15);
 }
 
+/* ==========================
+      RESPONSIVIDADE
+========================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hamburguer {
+        display: flex;
+    }
+
+    .abas ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .duas-colunas {
+        flex-direction: column;
+    }
+
+    .lista-cursos {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
