@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231: Desenvolvimento Frontend para Web I</title>
+    <meta name="description"
+        content="WDD 231: Desenvolvimento Frontend para Web I, por João Augusto Anselmo Moraes Ferreira.">
+    <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
+
+    <script src="script/obterdatas.js" defer></script>
+
+    <link rel="stylesheet" href="estilo/planejamento.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <img src="imagens/logo.svg" alt="Logo do site">
+    <span class="titulo">nome do website</span>
+
+    <button class="hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<nav class="abas">
+    <ul>
+        <li><a href="planejamentodosite.html" class="ativo">Página Inicial</a></li>
+        <li><a href="projetodacamera.html">Projeto da Câmara</a></li>
+        <li><a href="projetofinal.html">Projeto Final</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Página Inicial</h1>
+
+    <div class="duas-colunas">
+        <section class="card">
+            <h2>Sobre Mim</h2>
+            <p>
+                Me chamo João Augusto, tenho 22 anos, sou ex-missionário e sirvo atualmente
+                como secretário do ramo. Estou fazendo o curso de desenvolvimento de software
+                na BYU, e desejo no futuro me formar e ter um emprego nessa área.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Foto</h2>
+            <img src="imagens/perfil.jpg" alt="Foto de perfil" class="img-centro">
+        </section>
+    </div>
+
+    <section class="cursos card">
+        <h2>Cursos de Certificação Web</h2>
+
+        <div class="filtros">
+            <button class="filtro ativo">Todos</button>
+            <button class="filtro">CSE</button>
+            <button class="filtro">WDD</button>
+        </div>
+
+        <ul class="lista-cursos">
+            <li>WDD 130</li>
+            <li>WDD 131</li>
+            <li>WDD 231</li>
+        </ul>
+
+        <p class="total-creditos">O total de créditos pelos cursos acima é 6</p>
+
+        
+    </section>
+</main>
+
+<footer>
+    <div class="socialmedia">
+        <a href="https://linkedin.com/in/SEU-USUARIO"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://facebook.com"><img src="imagens/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com"><img src="imagens/instagram.svg" alt="Instagram"></a>
+    </div>
+    <div>
+        <p>&copy; <span id="anoatual"></span> João Augusto - São Paulo, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </div>
+</footer>
+    
+</body>
+</html>
