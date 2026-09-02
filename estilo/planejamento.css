@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: #0d1b2a;
-    color: white;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,9 +41,22 @@ header img {
     margin-bottom: 5px;
 }
 
-#course-title {
-    color: #5bb8ff;
-    font-size: 1rem;
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
 /* ==========================
@@ -60,11 +73,12 @@ header img {
     display: flex;
 }
 
+/* Correção de Contraste WCAG AA: forçando texto 100% branco (#ffffff) */
 .abas a {
     display: block;
     padding: 15px 25px;
     text-decoration: none;
-    color: white;
+    color: #ffffff !important;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
@@ -75,7 +89,7 @@ header img {
 }
 
 /* ==========================
-        CONTEÚDO
+        CONTEÚDO E CARDS
 ========================== */
 
 main {
@@ -90,8 +104,17 @@ main > h1 {
     margin-bottom: 20px;
 }
 
+.duas-colunas {
+    display: flex;
+    gap: 20px;
+}
+
+.duas-colunas .card {
+    flex: 1;
+}
+
 .card {
-    background: white;
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     padding: 25px;
@@ -120,20 +143,7 @@ main > h1 {
 }
 
 /* ==========================
-        DUAS COLUNAS
-========================== */
-
-.duas-colunas {
-    display: flex;
-    gap: 20px;
-}
-
-.duas-colunas .card {
-    flex: 1;
-}
-
-/* ==========================
-        CURSOS
+        CURSOS & FILTROS
 ========================== */
 
 .filtros {
@@ -144,54 +154,56 @@ main > h1 {
 }
 
 .filtro {
-    background-color: #e0e0e0;
+    background-color: #000000;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 30px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .filtro.ativo,
 .filtro:hover {
-    background-color: #0056b3;
-    color: white;
+    background-color: #222222;
 }
 
+/* Regra Unificada para .lista-cursos (Sem duplicidade) */
 .lista-cursos {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 0;
     margin-bottom: 15px;
 }
 
+/* Regra Unificada para .lista-cursos li (Sem duplicidade) */
 .lista-cursos li {
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Cores dos Cursos */
+.lista-cursos li.concluido {
+    background-color: #5c2d16;
+    color: #ffffff;
+}
+
+.lista-cursos li.pendente {
+    background-color: #dcdcdc;
+    color: #333333;
 }
 
 .total-creditos {
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 20px;
-}
-
-.badges {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.badges img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 6px;
 }
 
 /* ==========================
@@ -200,7 +212,7 @@ main > h1 {
 
 footer {
     background-color: #0d1b2a;
-    color: white;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,6 +246,10 @@ footer {
         text-align: center;
     }
 
+    .hamburguer {
+        display: flex;
+    }
+
     .abas ul {
         flex-direction: column;
         text-align: center;
@@ -243,49 +259,13 @@ footer {
         flex-direction: column;
     }
 
+    .lista-cursos {
+        grid-template-columns: 1fr;
+    }
+
     footer {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-}
-
-/* Estilização do Grid de Cursos */
-.lista-cursos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.lista-cursos li {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 8px;
-    font-size: 1.1rem;
-}
-
-/* Cursos concluídos (estilo marrom igual a imagem) */
-.lista-cursos li.concluido {
-    background-color: #ff000d;
-    color: #ffffff;
-}
-
-/* Cursos pendentes (estilo cinza) */
-.lista-cursos li.pendente {
-    background-color: #dcdcdc;
-    color: #555555;
-}
-
-/* Botões do topo (Todos, CSE, WDD) */
-.filtros .filtro {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 8px;
-    cursor: pointer;
 }
