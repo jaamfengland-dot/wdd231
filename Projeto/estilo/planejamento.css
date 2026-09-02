@@ -12,15 +12,16 @@ body {
 }
 
 /* ==========================
-        CABEÇALHO & NAV
+        CABEÇALHO
 ========================== */
 
 header {
     background-color: #0d1b2a;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
     padding: 20px 40px;
     flex-wrap: wrap;
 }
@@ -31,28 +32,23 @@ header img {
 }
 
 .titulo {
+    text-align: center;
+}
+
+.titulo h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
 }
 
-.hamburguer {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+#course-title {
+    color: #5bb8ff;
+    font-size: 1rem;
 }
 
-.hamburguer span {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
-}
+/* ==========================
+        ABAS (NAV)
+========================== */
 
 .abas {
     background-color: #0d1b2a;
@@ -94,15 +90,6 @@ main > h1 {
     margin-bottom: 20px;
 }
 
-.duas-colunas {
-    display: flex;
-    gap: 20px;
-}
-
-.duas-colunas .card {
-    flex: 1;
-}
-
 .card {
     background: white;
     border-radius: 12px;
@@ -130,6 +117,19 @@ main > h1 {
     max-width: 350px;
     height: auto;
     border-radius: 10px;
+}
+
+/* ==========================
+        DUAS COLUNAS
+========================== */
+
+.duas-colunas {
+    display: flex;
+    gap: 20px;
+}
+
+.duas-colunas .card {
+    flex: 1;
 }
 
 /* ==========================
@@ -179,6 +179,21 @@ main > h1 {
     margin-bottom: 20px;
 }
 
+.badges {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badges img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
 /* ==========================
         RODAPÉ
 ========================== */
@@ -215,11 +230,8 @@ footer {
 
 @media (max-width: 768px) {
     header {
+        flex-direction: column;
         text-align: center;
-    }
-
-    .hamburguer {
-        display: flex;
     }
 
     .abas ul {
@@ -236,4 +248,44 @@ footer {
         gap: 15px;
         text-align: center;
     }
+}
+
+/* Estilização do Grid de Cursos */
+.lista-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-cursos li {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Cursos concluídos (estilo marrom igual a imagem) */
+.lista-cursos li.concluido {
+    background-color: #ff000d;
+    color: #ffffff;
+}
+
+/* Cursos pendentes (estilo cinza) */
+.lista-cursos li.pendente {
+    background-color: #dcdcdc;
+    color: #555555;
+}
+
+/* Botões do topo (Todos, CSE, WDD) */
+.filtros .filtro {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
 }
