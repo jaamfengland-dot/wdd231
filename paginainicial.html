@@ -8,10 +8,12 @@
     <meta name="description" content="WDD 231: Desenvolvimento Frontend para Web I, por João Augusto Anselmo Moraes Ferreira.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
 
-    <link rel="stylesheet" href="estilo/base.css">
-    <link rel="stylesheet" href="estilo/planejamento.css">
+    <!-- Caminhos corrigidos para a pasta no plural: estilos/ -->
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/planejamento.css">
 
-    <script src="script/obterdatas.js" defer></script>
+    <!-- Caminho corrigido para a pasta no plural: scripts/ -->
+    <script src="scripts/obterdatas.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
 <body>
 
 <header>
-    <img src="imagens/perfil.jpg" alt="Logo do site">
+    <img src="imagens/logo.svg" alt="Logo do site">
     <span class="titulo">nome do website</span>
 
     <button class="hamburguer" aria-label="Abrir menu">
@@ -67,15 +69,9 @@
             <button class="filtro">WDD</button>
         </div>
 
-        <ul class="lista-cursos">
-            <li>WDD 130</li>
-            <li>WDD 131</li>
-            <li>WDD 231</li>
-        </ul>
+        <ul class="lista-cursos"></ul>
 
-        <p class="total-creditos">O total de créditos pelos cursos acima é 6</p>
-
-        
+        <p class="total-creditos"></p>
     </section>
 </main>
 
@@ -86,11 +82,10 @@
         <a href="https://instagram.com"><img src="imagens/instagram.svg" alt="Instagram"></a>
     </div>
     <div>
-
         <p>&copy; <span id="anoatual"></span> João Augusto - São Paulo</p>
         <p id="ultimamodificacao"></p>
     </div>
 </footer>
-    
+
 </body>
 </html>
