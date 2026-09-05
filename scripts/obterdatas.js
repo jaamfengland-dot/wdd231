@@ -93,7 +93,7 @@ const conteinerCursos = document.querySelector('.lista-cursos');
 const elTotalCreditos = document.querySelector('.total-creditos');
 const botoesFiltro = document.querySelectorAll('.filtro');
 
-// Função para renderizar os cards de cursos e atualizar a frase de créditos
+// Função para renderizar os cards 
 function renderizarCursos(lista) {
     conteinerCursos.innerHTML = '';
 

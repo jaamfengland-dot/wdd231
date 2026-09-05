@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,10 +10,7 @@ body {
     background-color: #eef3f8;
     line-height: 1.6;
 }
-
-/* ==========================
-        CABEÇALHO
-========================== */
+/* CABEÇALHO */
 
 header {
     background-color: #0d1b2a;
@@ -56,9 +53,7 @@ header img {
     border-radius: 2px;
 }
 
-/* ==========================
-        ABAS (NAV)
-========================== */
+/* ABAS (NAV) */
 
 .abas {
     background-color: #0d1b2a;
@@ -70,7 +65,6 @@ header img {
     display: flex;
 }
 
-/* Corrigido: Sem !important, usando seletores encadeados para garantir especificidade */
 nav.abas ul li a,
 nav.abas ul li a:visited,
 nav.abas ul li a:link {
@@ -88,9 +82,7 @@ nav.abas ul li a:hover {
     color: #ffffff;
 }
 
-/* ==========================
-        CONTEÚDO
-========================== */
+/* CONTEÚDO*/
 
 main {
     max-width: 1200px;
@@ -142,9 +134,7 @@ main > h1 {
     border-radius: 10px;
 }
 
-/* ==========================
-        CURSOS & FILTROS
-========================== */
+/* CURSOS & FILTROS */
 
 .filtros {
     display: flex;
@@ -203,9 +193,7 @@ main > h1 {
     margin-bottom: 20px;
 }
 
-/* ==========================
-        RODAPÉ
-========================== */
+/* RODAPÉ*/
 
 footer {
     background-color: #0d1b2a;
@@ -233,9 +221,7 @@ footer {
     transform: scale(1.15);
 }
 
-/* ==========================
-      RESPONSIVIDADE
-========================== */
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
     header {
