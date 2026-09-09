@@ -27,12 +27,39 @@
     "descricao": "Empresa especializada em construção, reformas e projetos residenciais."
   },
   {
-    "nome": "Auto Center ",
+    "nome": "Auto Center",
     "endereco": "Rua Paraná, 310, Jardim Maringá, Itapeva - SP",
     "telefone": "(15) 3522-3456",
     "url": "https://www.autocenter.com.br",
     "imagem": "auto-center.jpg",
     "nivel_associacao": 3,
     "descricao": "Oficina especializada em manutenção, revisão e serviços automotivos."
+  },
+  {
+    "nome": "Padaria Pão Dourado",
+    "endereco": "Rua Bahia, 210, Centro, Itapeva - SP",
+    "telefone": "(15) 3522-7788",
+    "url": "https://www.paodourado.com.br",
+    "imagem": "padaria-pao-dourado.jpg",
+    "nivel_associacao": 1,
+    "descricao": "Padaria artesanal com pães, doces e salgados feitos diariamente."
+  },
+  {
+    "nome": "Clínica Vida Saudável",
+    "endereco": "Avenida Brasil, 560, Jardim Primavera, Itapeva - SP",
+    "telefone": "(15) 3522-4411",
+    "url": "https://www.vidasaudavel.com.br",
+    "imagem": "clinica-vida-saudavel.jpg",
+    "nivel_associacao": 2,
+    "descricao": "Clínica médica com atendimento em clínica geral, pediatria e exames de rotina."
+  },
+  {
+    "nome": "Studio Fit Academia",
+    "endereco": "Rua Goiás, 88, Vila Nova, Itapeva - SP",
+    "telefone": "(15) 3522-9933",
+    "url": "https://www.studiofit.com.br",
+    "imagem": "studio-fit.jpg",
+    "nivel_associacao": 3,
+    "descricao": "Academia completa com musculação, aulas coletivas e acompanhamento profissional."
   }
 ]

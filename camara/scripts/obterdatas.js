@@ -7,4 +7,3 @@ document.getElementById("anoatual").textContent = anoAtual;
 // Exibe a data da última modificação do documento
 document.getElementById("ultimamodificacao").textContent =
     `última modificação: ${document.lastModified}`;
-
