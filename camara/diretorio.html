@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Diretório de Membros | ACL</title>
-    <meta name="description" content="Diretório de membros e parceiros da ProtegeBet, iniciativa de conscientização sobre os riscos das apostas online.">
+    <title>ProtegeBet | Câmara de Comércio</title>
+    <meta name="description" content="Página inicial da ProtegeBet, iniciativa de conscientização sobre os riscos das apostas online.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
 
     <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
 
-    <link rel="stylesheet" href="estilos/diretorio.css">
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Meta tags de Redes Sociais (Open Graph) -->
-    <meta property="og:title" content="Diretório de Membros | ProtegeBet">
-    <meta property="og:description" content="Conheça os membros e parceiros da ProtegeBet, dedicados à conscientização sobre os riscos das apostas online.">
-    <meta property="og:image" content="https://jaamfengland-dot.github.io/wdd231/imagens/og-diretorio.jpg">
-    <meta property="og:url" content="https://jaamfengland-dot.github.io/wdd231/diretorio.html">
+    <meta property="og:title" content="ProtegeBet | Câmara de Comércio">
+    <meta property="og:description" content="Conscientização sobre os riscos das apostas online — eventos, clima e destaques de membros.">
+    <meta property="og:image" content="https://jaamfengland-dot.github.io/wdd231/imagens/og-index.jpg">
+    <meta property="og:url" content="https://jaamfengland-dot.github.io/wdd231/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
 </head>
@@ -29,9 +30,22 @@
 <body>
 
 <header>
-    <img src="imagens/logo.svg" alt="Logo ACL">
-    <span class="titulo"> ACL</span>
-    <p>Associação Comercial Local</p>
+    <img src="imagens/logo.svg" alt="Logo ProtegeBet">
+    <div class="titulo-grupo">
+        <span class="titulo">ProtegeBet</span>
+        <span class="subtitulo">Câmara de Comércio</span>
+    </div>
+
+    <nav class="abas">
+        <ul>
+            <li><a href="index.html" class="ativo">Início</a></li>
+            <li><a href="diretorio.html">Diretório</a></li>
+            <li><a href="associe-se.html">Associar-se</a></li>
+            <li><a href="descobrir.html">Descobrir</a></li>
+        </ul>
+    </nav>
+
+    <button id="botao-tema" aria-label="Alternar tema escuro">🌙</button>
 
     <button class="hamburguer" aria-label="Abrir menu">
         <span></span>
@@ -40,35 +54,78 @@
     </button>
 </header>
 
-<nav class="abas">
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="diretorio.html" class="ativo">Diretório</a></li>
-        <li><a href="associe-se.html">Associe-se</a></li>
-    </ul>
-</nav>
+<section class="hero">
+    <img src="imagens/hero.jpg" alt="Imagem principal da câmara">
+    <button class="botao-hero">Ingressos Palestra</button>
+</section>
 
 <main>
-    <h1>Diretório de Membros</h1>
+    <h1>Início</h1>
+
+    <div class="grade-principal">
+        <section class="caixa eventos">
+            <h2>Eventos</h2>
+            <ul id="lista-eventos"></ul>
+        </section>
+
+        <section class="caixa clima">
+            <h2>Clima</h2>
+            <div class="clima-atual">
+                <img src="imagens/nublado.svg" alt="Parcialmente nublado" class="icone-clima">
+                <div>
+                    <p class="temperatura">22°C</p>
+                    <p class="condicao">Parcialmente Nublado</p>
+                </div>
+            </div>
+            <ul class="detalhes-clima">
+                <li>Máxima: <strong>24°C</strong></li>
+                <li>Mínima: <strong>19°C</strong></li>
+                <li>Umidade: <strong>34%</strong></li>
+                <li>Nascer do Sol: <strong>7:30</strong></li>
+                <li>Pôr do Sol: <strong>20:59</strong></li>
+            </ul>
+        </section>
+
+        <section class="caixa previsao">
+            <h2>Previsão de Clima</h2>
+            <ul class="lista-previsao">
+                <li>Hoje: <strong>32°C</strong></li>
+                <li>Quarta-Feira: <strong>31°C</strong></li>
+                <li>Sexta-Feira: <strong>18°C</strong></li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="destaques" id="destaques-membros">
+        <!-- Cartões de destaque de membros gerados via JS a partir do JSON -->
+    </section>
 </main>
 
 <footer>
     <div class="contato">
-        <p>ACL</p>
-        <p>São Paulo, SP</p>
-        <p>contato@associaçãocomercialocal.org</p>
+        <p><strong>ProtegeBet Câmara de Comércio</strong></p>
+        <p>Rua Exemplo, 999</p>
+        <p>Itapeva, SP 18400</p>
+        <p>contato@protegebet.org</p>
+        <p>(15) 3522-0000</p>
     </div>
+
+    <div class="socialmedia">
+        <a href="https://youtube.com" aria-label="YouTube"><img src="imagens/youtube.svg" alt="YouTube"></a>
+        <a href="https://x.com" aria-label="X"><img src="imagens/x.svg" alt="X"></a>
+        <a href="https://linkedin.com" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+
     <div class="desenvolvimento">
+        <p><strong>Projeto de Aula WDD 231</strong></p>
         <p>João Augusto Anselmo Moraes Ferreira</p>
-        <p>WDD 231</p>
+        <p>&copy; <span id="anoatual"></span> ProtegeBet Câmara de Comércio</p>
         <p id="ultimamodificacao"></p>
     </div>
 </footer>
 
-<script>
-    document.getElementById("ultimamodificacao").textContent =
-        "Última atualização: " + document.lastModified;
-</script>
+<script src="scripts/obterdatas.js" defer></script>
+<script src="scripts/index.js" defer></script>
 
 </body>
 </html>

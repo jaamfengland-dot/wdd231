@@ -13,242 +13,236 @@ body {
 /* CABEÇALHO */
 
 header {
-    background-color: #0d1b2a;
-    color: #ffffff;
+    background-color: #dcdcdc;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px 40px;
+    gap: 15px;
+    padding: 15px 40px;
     flex-wrap: wrap;
 }
 
 header img {
-    width: 90px;
-    height: auto;
+    width: 50px;
 }
 
 .titulo {
-    text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+header nav.abas {
+    margin-left: auto;
+}
+
+header nav.abas ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+header nav.abas ul li a {
+    color: #0d1b2a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+header nav.abas ul li a.ativo,
+header nav.abas ul li a:hover {
+    background-color: #c9c9c9;
+    border-radius: 6px;
+}
+
+#botao-tema {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0d1b2a;
+    color: #f6c453;
+    cursor: pointer;
 }
 
 .hamburguer {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
 }
 
-.hamburguer span {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-}
+/* HERO */
 
-/* ABAS (NAV) */
-
-.abas {
-    background-color: #0d1b2a;
-    border-top: 1px solid #1b2f45;
-}
-
-.abas ul {
-    list-style: none;
+.hero {
+    position: relative;
+    min-height: 320px;
     display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 25px 40px;
+    background-color: #e6e6e6;
 }
 
-nav.abas ul li a,
-nav.abas ul li a:visited,
-nav.abas ul li a:link {
-    display: block;
-    padding: 15px 25px;
-    text-decoration: none;
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.botao-hero {
+    position: relative;
+    z-index: 1;
+    background-color: #9a9a9a;
     color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-nav.abas ul li a.ativo,
-nav.abas ul li a:hover {
-    background-color: #1b2f45;
-    color: #ffffff;
-}
-
-/* CONTEÚDO*/
+/* CONTEÚDO PRINCIPAL */
 
 main {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 main > h1 {
     font-family: 'Poppins', sans-serif;
-    color: #0d1b2a;
     margin-bottom: 20px;
 }
 
-.duas-colunas {
-    display: flex;
+.grade-principal {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
     gap: 20px;
-}
-
-.duas-colunas .card {
-    flex: 1;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    padding: 25px;
-    text-align: center;
     margin-bottom: 30px;
 }
 
-.card h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #0d1b2a;
-    margin-bottom: 20px;
-}
-
-.card p {
-    text-align: justify;
-    margin-bottom: 15px;
-}
-
-.img-centro {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* CURSOS & FILTROS */
-
-.filtros {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.filtro {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    padding: 10px 30px;
+.caixa {
+    background-color: #ffffff;
     border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
-.filtro.ativo,
-.filtro:hover {
+.caixa h2 {
     background-color: #222222;
+    color: #ffffff;
+    padding: 14px 18px;
 }
 
-.lista-cursos {
+.caixa ul {
     list-style: none;
+    padding: 18px;
+}
+
+.clima-atual {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+}
+
+.icone-clima {
+    width: 60px;
+}
+
+.temperatura {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* DESTAQUES DE MEMBROS */
+
+.destaques {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 0;
-    margin-bottom: 15px;
+    gap: 20px;
 }
 
-.lista-cursos li {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
+.cartao-membro {
+    background-color: #ececec;
     border-radius: 8px;
-    font-size: 1.1rem;
-}
-
-.lista-cursos li.concluido {
-    background-color: #5c2d16;
-    color: #ffffff;
-}
-
-.lista-cursos li.pendente {
-    background-color: #dcdcdc;
-    color: #333333;
-}
-
-.total-creditos {
+    padding: 20px;
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
-/* RODAPÉ*/
+.cartao-membro .slogan {
+    color: #555555;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.cartao-membro .info {
+    display: flex;
+    gap: 12px;
+    text-align: left;
+}
+
+.cartao-membro img.foto {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cartao-membro .dados p {
+    font-size: 0.85rem;
+}
+
+/* RODAPÉ */
 
 footer {
-    background-color: #0d1b2a;
-    color: #ffffff;
+    background-color: #eef3f8;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 40px;
+    margin-top: 40px;
 }
 
 .socialmedia {
     display: flex;
     gap: 12px;
-    align-items: center;
 }
 
 .socialmedia img {
     width: 32px;
     height: 32px;
-    transition: transform 0.3s ease;
-}
-
-.socialmedia img:hover {
-    transform: scale(1.15);
 }
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 900px) {
+    .grade-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    header nav.abas {
+        display: none;
     }
 
     .hamburguer {
-        display: flex;
-    }
-
-    .abas ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .duas-colunas {
-        flex-direction: column;
-    }
-
-    .lista-cursos {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     footer {
         flex-direction: column;
-        gap: 15px;
         text-align: center;
     }
 }
