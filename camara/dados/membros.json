@@ -27,11 +27,11 @@
     "descricao": "Empresa especializada em construção, reformas e projetos residenciais."
   },
   {
-    "nome": "Auto Center Itapeva",
+    "nome": "Auto Center ",
     "endereco": "Rua Paraná, 310, Jardim Maringá, Itapeva - SP",
     "telefone": "(15) 3522-3456",
-    "url": "https://www.autocenteritapeva.com.br",
-    "imagem": "auto-center-itapeva.jpg",
+    "url": "https://www.autocenter.com.br",
+    "imagem": "auto-center.jpg",
     "nivel_associacao": 3,
     "descricao": "Oficina especializada em manutenção, revisão e serviços automotivos."
   }
