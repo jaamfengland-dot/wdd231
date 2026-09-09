@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Tech Pablo",
+    "endereco": "Rua São Paulo, 125, Centro, Itapeva - SP",
+    "telefone": "(15) 3522-1234",
+    "url": "https://www.techpablo.com.br",
+    "imagem": "tech-pablo.jpg",
+    "nivel_associacao": 3,
+    "descricao": "Empresa especializada em desenvolvimento de sites, sistemas e soluções digitais."
+  },
+  {
+    "nome": "Mercado Bom Preço",
+    "endereco": "Avenida Carlos Marques, 450, Centro, Itapeva - SP",
+    "telefone": "(15) 3522-5678",
+    "url": "https://www.mercadobompreco.com.br",
+    "imagem": "mercado-bom-preco.jpg",
+    "nivel_associacao": 2,
+    "descricao": "Mercado local com produtos alimentícios, bebidas e itens para o dia a dia."
+  },
+  {
+    "nome": "Construtora Santos",
+    "endereco": "Rua Minas Gerais, 780, Jardim Europa, Itapeva - SP",
+    "telefone": "(15) 3522-9012",
+    "url": "https://www.construtorasantos.com.br",
+    "imagem": "construtora-santos.jpg",
+    "nivel_associacao": 1,
+    "descricao": "Empresa especializada em construção, reformas e projetos residenciais."
+  },
+  {
+    "nome": "Auto Center Itapeva",
+    "endereco": "Rua Paraná, 310, Jardim Maringá, Itapeva - SP",
+    "telefone": "(15) 3522-3456",
+    "url": "https://www.autocenteritapeva.com.br",
+    "imagem": "auto-center-itapeva.jpg",
+    "nivel_associacao": 3,
+    "descricao": "Oficina especializada em manutenção, revisão e serviços automotivos."
+  }
+]
