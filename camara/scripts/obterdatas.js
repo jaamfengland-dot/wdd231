@@ -1,25 +1,35 @@
-// Obtém o ano atual
+
 const anoAtual = new Date().getFullYear();
-
-// Exibe o ano dos direitos autorais
 document.getElementById("anoatual").textContent = anoAtual;
+document.getElementById("ultimamodificacao").textContent = `última modificação: ${document.lastModified}`;
 
-// Exibe a data da última modificação do documento
-document.getElementById("ultimamodificacao").textContent =
-    `última modificação: ${document.lastModified}`;
+const btnHamburguer = document.querySelector('.hamburguer');
+const navAbas = document.querySelector('.abas');
 
-    const membrosContainer = document.getElementById('membros');
+btnHamburguer.addEventListener('click', () => {
+    navAbas.style.display = navAbas.style.display === 'block' ? 'none' : 'block';
+});
+
+const membrosContainer = document.getElementById('membros');
+const btnGrade = document.getElementById('btn-grade');
+const btnLista = document.getElementById('btn-lista');
 
 async function getMembros() {
     try {
-        const resposta = await fetch('membros.json');
+        const resposta = await fetch('dados/membros.json'); 
+        if (!resposta.ok) {
+            throw new Error(`Erro de rede: ${resposta.status}`);
+        }
         const membros = await resposta.json();
         exibirMembros(membros);
     } catch (erro) {
         console.error("Erro ao buscar dados dos membros:", erro);
     }
 }
+
 function exibirMembros(membros) {
+    membrosContainer.innerHTML = ''; 
+
     membros.forEach(membro => {
         let card = document.createElement('div');
         card.className = 'cartao-membro';
@@ -37,9 +47,6 @@ function exibirMembros(membros) {
 
 getMembros();
 
-const btnGrade = document.getElementById('btn-grade');
-const btnLista = document.getElementById('btn-lista');
-
 btnGrade.addEventListener('click', () => {
     membrosContainer.classList.add('destaques');
     membrosContainer.classList.remove('lista');
@@ -48,10 +55,4 @@ btnGrade.addEventListener('click', () => {
 btnLista.addEventListener('click', () => {
     membrosContainer.classList.add('lista');
     membrosContainer.classList.remove('destaques');
-});
-const btnHamburguer = document.querySelector('.hamburguer');
-const navAbas = document.querySelector('.abas');
-
-btnHamburguer.addEventListener('click', () => {
-    navAbas.style.display = navAbas.style.display === 'block' ? 'none' : 'block';
 });

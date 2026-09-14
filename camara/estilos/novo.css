@@ -31,3 +31,9 @@ a {
 .membros.lista .cartao-membro img.foto {
     display: none;
 }
+
+/* Estilo dos controles de visualização */
+.controles-visualizacao {
+    text-align: center;
+    margin-bottom: 20px;
+}
