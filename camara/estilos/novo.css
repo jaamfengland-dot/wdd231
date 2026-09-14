@@ -13,3 +13,22 @@ a {
     color: inherit;
     text-decoration: none;
 }
+/* ESTILOS PARA O MODO LISTA */
+.membros.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.membros.lista .cartao-membro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+}
+
+/* Oculta a imagem no modo lista conforme a rubrica */
+.membros.lista .cartao-membro img.foto {
+    display: none;
+}
