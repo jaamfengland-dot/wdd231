@@ -10,7 +10,6 @@ document.getElementById("ultimamodificacao").textContent =
 
     const membrosContainer = document.getElementById('membros');
 
-// Função Async/Await exigida no Critério 8
 async function getMembros() {
     try {
         const resposta = await fetch('membros.json');
@@ -20,8 +19,6 @@ async function getMembros() {
         console.error("Erro ao buscar dados dos membros:", erro);
     }
 }
-
-// Função para gerar o HTML dos cartões (Critério 9)
 function exibirMembros(membros) {
     membros.forEach(membro => {
         let card = document.createElement('div');
@@ -40,7 +37,6 @@ function exibirMembros(membros) {
 
 getMembros();
 
-// Lógica de alternância (Grade / Lista) exigida no Critério 10
 const btnGrade = document.getElementById('btn-grade');
 const btnLista = document.getElementById('btn-lista');
 
