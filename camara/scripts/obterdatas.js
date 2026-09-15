@@ -16,12 +16,16 @@ const btnLista = document.getElementById('btn-lista');
 
 async function getMembros() {
     try {
+        // Certifique-se de que o arquivo está na pasta 'dados/membros.json'
         const resposta = await fetch('dados/membros.json'); 
         if (!resposta.ok) {
             throw new Error(`Erro de rede: ${resposta.status}`);
         }
         const membros = await resposta.json();
-        exibirMembros(membros);
+        
+        if (membrosContainer) {
+            exibirMembros(membros);
+        }
     } catch (erro) {
         console.error("Erro ao buscar dados dos membros:", erro);
     }
@@ -34,11 +38,13 @@ function exibirMembros(membros) {
         let card = document.createElement('div');
         card.className = 'cartao-membro';
         
+        // Usando as propriedades corretas do seu JSON (incluindo nivel_associacao se precisar exibir)
         card.innerHTML = `
             <img src="imagens/${membro.imagem}" alt="Logo da empresa ${membro.nome}" class="foto" loading="lazy">
             <h3>${membro.nome}</h3>
             <p>${membro.endereco}</p>
             <p>${membro.telefone}</p>
+            <p>Nível: ${membro.nivel_associacao}</p>
             <a href="${membro.url}" target="_blank">Visitar Site</a>
         `;
         membrosContainer.appendChild(card);
@@ -47,12 +53,14 @@ function exibirMembros(membros) {
 
 getMembros();
 
-btnGrade.addEventListener('click', () => {
-    membrosContainer.classList.add('destaques');
-    membrosContainer.classList.remove('lista');
-});
+if (btnGrade && btnLista) {
+    btnGrade.addEventListener('click', () => {
+        membrosContainer.classList.add('destaques');
+        membrosContainer.classList.remove('lista');
+    });
 
-btnLista.addEventListener('click', () => {
-    membrosContainer.classList.add('lista');
-    membrosContainer.classList.remove('destaques');
-});
+    btnLista.addEventListener('click', () => {
+        membrosContainer.classList.add('lista');
+        membrosContainer.classList.remove('destaques');
+    });
+}
