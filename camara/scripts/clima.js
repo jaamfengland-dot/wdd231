@@ -1,7 +1,7 @@
 // Coordenadas de Itapeva, SP e sua chave da API
 const lat = '-23.98';
 const lon = '-48.87';
-const apiKey = '774dca97420805ff78532397e39e6983'; //chAVE
+const apiKey = '774dca97420805ff78532397e39e6983'; //chave
 
 const urlClimaAtual = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
 const urlPrevisao = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
