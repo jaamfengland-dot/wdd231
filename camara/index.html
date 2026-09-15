@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título atualizado para a página inicial -->
+    <title>ACL - Associação Comerciante Local | Início</title>
+    <meta property="og:title" content="ACL | Início">
+    <meta name="description" content="Página inicial da Associação Comerciante Local (ACL) de Itapeva.">
+    <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Certifique-se de que seus arquivos CSS cobrem os novos elementos -->
+    <link rel="stylesheet" href="estilos/diretorio.css">
+    <link rel="stylesheet" href="estilos/novo.css">
+    <script src="scripts/obterdatas.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Meta tags de Redes Sociais (Open Graph) -->
+    <meta property="og:description" content="Junte-se à ACL e fortaleça o comércio da nossa região.">
+    <meta property="og:url" content="https://jaamfengland-dot.github.io/wdd231/camara/index.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://jaamfengland-dot.github.io/wdd231/imagens/logo.jpg" />
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ACL">
+</head>
+
+<body>
+
+<header>
+    <img src="imagens/logo.jpg" alt="Logo ACL">
+    <div class="titulo-grupo">
+        <span class="titulo">ACL</span>
+        <span class="subtitulo">Associação Comerciante Local</span>
+    </div>
+
+    <nav class="abas">
+        <ul>
+            <!-- A classe "ativo" foi movida para "Início" -->
+            <li><a href="index.html" class="ativo">Início</a></li>
+            <li><a href="diretorio.html">Diretório</a></li>
+            <li><a href="associe-se.html">Associar-se</a></li>
+            <li><a href="descobrir.html">Descobrir</a></li>
+        </ul>
+    </nav>
+
+    <button class="hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<main>
+    <!-- Seção: Hero Image e Call-to-Action (CTA) -->
+    <div class="hero-container">
+        <!-- O requisito pede que seja uma tag <img>, não background CSS -->
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/hero-pequena.jpg">
+            <img src="imagens/hero-grande.jpg" alt="Visão da cidade de Itapeva e comércio local" width="100%">
+        </picture>
+        
+        <div class="cta-box">
+            <h2>Fortaleça seu Negócio</h2>
+            <p>Junte-se aos melhores comerciantes locais e impulsione suas vendas.</p>
+            <a href="associe-se.html" class="botao-cta">Associe-se Agora!</a>
+        </div>
+    </div>
+
+    <div class="grade-principal">
+        <!-- Seção: Eventos Atuais -->
+        <section class="caixa eventos">
+            <h2>Eventos Atuais</h2>
+            <ul id="lista-eventos">
+                <li><strong>15 de Outubro:</strong> Feira do Empreendedor</li>
+                <li><strong>22 de Outubro:</strong> Reunião da Câmara</li>
+                <li><strong>05 de Novembro:</strong> Workshop de Vendas</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Clima -->
+        <section class="caixa clima">
+            <h2>Clima em Itapeva</h2>
+            <div class="clima-atual">
+                <img src="imagens/nuvem.png" alt="Parcialmente nublado" class="icone-clima">
+                <div>
+                    <p class="temperatura">22°C</p>
+                    <p class="condicao">Parcialmente Nublado</p>
+                </div>
+            </div>
+            <ul class="detalhes-clima">
+                <li>Máxima: <strong>32°C</strong></li>
+                <li>Mínima: <strong>22°C</strong></li>
+                <li>Umidade: <strong>30%</strong></li>
+            </ul>
+        </section>
+    </div>
+    <section class="membros destaques" id="membros">
+    </div>
+    </section>
+</main>
+
+<footer>
+    <div class="contato">
+        <p><strong>ACL Câmara de Comércio</strong></p>
+        <p>Rua Carlos Nyberto, 324</p>
+        <p>Itapeva, SP 13422</p>
+        <p>contato@associaçãocomerciantelocal.org.br</p>
+        <p>(15) 0028-9220</p>
+    </div>
+
+     <div class="socialmedia">
+        <a href="https://linkedin.com/in/SEU-USUARIO"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://facebook.com"><img src="imagens/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com"><img src="imagens/instagram.svg" alt="Instagram"></a>
+    </div>
+
+    <div class="desenvolvimento">
+        <p><strong>Projeto de Aula WDD 231</strong></p>
+        <p>João Augusto Anselmo Moraes Ferreira</p>
+        <p>&copy; <span id="anoatual"></span> ACL : Associação Comerciante Local</p>
+        <p id="ultimamodificacao"></p>
+    </div>
+</footer>
+
+</body>
+</html>
