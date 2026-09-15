@@ -16,7 +16,6 @@ const btnLista = document.getElementById('btn-lista');
 
 async function getMembros() {
     try {
-        // Certifique-se de que o arquivo está na pasta 'dados/membros.json'
         const resposta = await fetch('dados/membros.json'); 
         if (!resposta.ok) {
             throw new Error(`Erro de rede: ${resposta.status}`);
@@ -38,7 +37,6 @@ function exibirMembros(membros) {
         let card = document.createElement('div');
         card.className = 'cartao-membro';
         
-        // Usando as propriedades corretas do seu JSON (incluindo nivel_associacao se precisar exibir)
         card.innerHTML = `
             <img src="imagens/${membro.imagem}" alt="Logo da empresa ${membro.nome}" class="foto" loading="lazy">
             <h3>${membro.nome}</h3>
