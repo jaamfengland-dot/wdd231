@@ -1,8 +1,13 @@
-
+// ==========================================
+// 1. RODAPÉ (Ano atual e Última modificação)
+// ==========================================
 const anoAtual = new Date().getFullYear();
 document.getElementById("anoatual").textContent = anoAtual;
 document.getElementById("ultimamodificacao").textContent = `última modificação: ${document.lastModified}`;
 
+// ==========================================
+// 2. MENU HAMBÚRGUER (Responsividade)
+// ==========================================
 const btnHamburguer = document.querySelector('.hamburguer');
 const navAbas = document.querySelector('.abas');
 
@@ -10,6 +15,9 @@ btnHamburguer.addEventListener('click', () => {
     navAbas.style.display = navAbas.style.display === 'block' ? 'none' : 'block';
 });
 
+// ==========================================
+// 3. DIRETÓRIO DE MEMBROS E BOTÕES GRADE/LISTA
+// ==========================================
 const membrosContainer = document.getElementById('membros');
 const btnGrade = document.getElementById('btn-grade');
 const btnLista = document.getElementById('btn-lista');
@@ -21,10 +29,7 @@ async function getMembros() {
             throw new Error(`Erro de rede: ${resposta.status}`);
         }
         const membros = await resposta.json();
-        
-        if (membrosContainer) {
-            exibirMembros(membros);
-        }
+        exibirMembros(membros);
     } catch (erro) {
         console.error("Erro ao buscar dados dos membros:", erro);
     }
@@ -42,7 +47,6 @@ function exibirMembros(membros) {
             <h3>${membro.nome}</h3>
             <p>${membro.endereco}</p>
             <p>${membro.telefone}</p>
-            <p>Nível: ${membro.nivel_associacao}</p>
             <a href="${membro.url}" target="_blank">Visitar Site</a>
         `;
         membrosContainer.appendChild(card);
@@ -51,14 +55,12 @@ function exibirMembros(membros) {
 
 getMembros();
 
-if (btnGrade && btnLista) {
-    btnGrade.addEventListener('click', () => {
-        membrosContainer.classList.add('destaques');
-        membrosContainer.classList.remove('lista');
-    });
+btnGrade.addEventListener('click', () => {
+    membrosContainer.classList.add('destaques');
+    membrosContainer.classList.remove('lista');
+});
 
-    btnLista.addEventListener('click', () => {
-        membrosContainer.classList.add('lista');
-        membrosContainer.classList.remove('destaques');
-    });
-}
+btnLista.addEventListener('click', () => {
+    membrosContainer.classList.add('lista');
+    membrosContainer.classList.remove('destaques');
+});
