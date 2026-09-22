@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ACL - Associação Comerciante Local | Diretório</title>
-    <meta property="og:title" content="ACL | Diretório de Membros">
-    <meta name="description" content="Diretório de membros da ACL, Associação Comerciante Local.">
+    <title>ACL - Associação Comerciante Local | Início</title>
+    <meta name="description" content="Página inicial da ACL, Associação Comerciante Local de Itapeva.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
 
     <link rel="icon" href="favicon.ico">
 
+    <!-- Suas folhas de estilo -->
     <link rel="stylesheet" href="estilos/diretorio.css">
     <link rel="stylesheet" href="estilos/novo.css">
     
     <script src="scripts/obterdatas.js" defer></script>
     <script src="scripts/clima.js" defer></script>
+    <script src="scripts/destaques.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Meta tags de Redes Sociais (Open Graph) -->
-    <meta property="og:description" content="Conheça os comerciantes associados à ACL, a Câmara de Comércio de Itapeva.">
-    <meta property="og:url" content="https://jaamfengland-dot.github.io/wdd231/camara/diretorio.html">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:image" content="https://jaamfengland-dot.github.io/wdd231/imagens/logo.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ACL">
 </head>
 
 <body>
-
     <header>
         <img src="imagens/logo.jpg" alt="Logo ACL">
         <div class="titulo-grupo">
@@ -42,14 +33,14 @@
 
         <nav class="abas">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="diretorio.html" class="ativo">Diretório</a></li>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
                 <li><a href="associe-se.html">Associar-se</a></li>
                 <li><a href="descobrir.html">Descobrir</a></li>
             </ul>
         </nav>
 
-        <button class="hamburguer" aria-label="Abrir menu">
+        <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -57,35 +48,50 @@
     </header>
 
     <main>
-        <h1>Diretório de Membros</h1>
+        <!-- Imagem Principal Responsiva e Chamada para Ação sobre ela -->
+        <section class="hero">
+            <picture>
+                <img src="imagens/hero-camara.jpg" alt="Visão da cidade de Itapeva" loading="eager" width="1200" height="400">
+            </picture>
+            <a href="associe-se.html" class="botao-hero">Associe-se à Câmara Hoje!</a>
+        </section>
 
-        <!-- Botões de controle de visualização (Grade / Lista) -->
-        <div class="controles-visualizacao">
-            <button id="btn-grade" class="ativo-btn">Grade</button>
-            <button id="btn-lista">Lista</button>
-        </div>
+        <h1>Bem-vindo à Câmara de Comércio de Itapeva</h1>
 
         <div class="grade-principal">
+            <!-- Seção de Eventos Recentes -->
             <section class="caixa eventos">
-                <h2>Eventos</h2>
-                <ul id="lista-eventos"></ul>
+                <h2>Eventos Recentes</h2>
+                <ul id="lista-eventos">
+                    <li><strong>15/10 - Feira de Negócios:</strong> No pavilhão central.</li>
+                    <li><strong>22/10 - Workshop de Vendas:</strong> Inscrições abertas online.</li>
+                    <li><strong>05/11 - Reunião Mensal:</strong> Exclusivo para associados.</li>
+                </ul>
             </section>
 
+            <!-- Seção de Clima via API -->
             <section class="caixa clima">
-                <h2>Clima</h2>
+                <h2>Clima em Itapeva</h2>
                 <div class="clima-atual">
-                    <img src="imagens/nuvem.png" alt="Condição do tempo" class="icone-clima">
+                    <img src="" alt="Condição do tempo" class="icone-clima" id="icone-clima-img" style="display:none;">
                     <div>
                         <p class="temperatura" id="temperatura-atual">--°C</p>
                         <p class="condicao" id="descricao-clima">Carregando...</p>
                     </div>
                 </div>
+                <hr>
                 <div class="detalhes-clima" id="previsao-3dias">
+                    <!-- Previsão dos 3 dias entra aqui -->
                 </div>
             </section>
         </div>
         
-        <section class="membros destaques" id="membros"> </section>
+        <!-- Seção contendo de duas a três empresas em destaque -->
+        <section class="caixa-destaques">
+            <h2>Empresas em Destaque</h2>
+            <!-- O JavaScript injetará apenas 2 a 3 membros Ouro/Prata aqui -->
+            <div class="membros destaques" id="membros-destaque"></div>
+        </section>
     </main>
 
     <footer>
@@ -98,9 +104,9 @@
         </div>
 
         <div class="socialmedia">
-            <a href="https://linkedin.com/in/SEU-USUARIO" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
-            <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.svg" alt="Facebook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="imagens/instagram.svg" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="imagens/facebook.svg" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="imagens/instagram.svg" alt="Instagram"></a>
         </div>
 
         <div class="desenvolvimento">
@@ -110,6 +116,5 @@
             <p id="ultimamodificacao"></p>
         </div>
     </footer>
-
 </body>
 </html>
