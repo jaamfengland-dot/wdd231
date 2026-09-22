@@ -132,3 +132,25 @@ botoesFiltro.forEach(botao => {
         }
     });
 });
+
+function exibirInfosDoCurso(curso) {
+  infosDoCurso.innerHTML = '';
+  infosDoCurso.innerHTML = `
+    <button id="fecharModal">❌</button>
+    <h2>${curso.materia} ${curso.numero}</h2>
+    <h3>${curso.nome}</h3>
+    <p><strong>Créditos</strong>: ${curso.creditos}</p>
+    <p><strong>Certificado</strong>: ${curso.certificado}</p>
+    <p>${curso.descricao}</p>
+    <p><strong>Tecnologias</strong>: ${course.tecnologia.join(', ')}</p>
+  `;
+  infosDoCurso.showModal();
+
+  fecharModal.addEventListener("click", () => {
+    infosDoCurso.close();
+  });
+}
+
+courseDiv.addEventListener('click', () => {
+  exibirInfosDoCurso(curso);
+});
