@@ -234,3 +234,47 @@ dialog button.fechar-modal {
     background: #f0f0f0;
     cursor: pointer;
 }
+
+/* 1. Previne 100% a barra de rolagem horizontal no mobile (Critério de Design) */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 2. Garante que os links de navegação tenham boa área de toque (Critério Lighthouse - SEO/Acessibilidade) */
+header nav.abas ul li a {
+    display: inline-block;
+    padding: 12px 15px; /* Áreas de clique maiores no celular evitam punição do Lighthouse */
+}
+
+/* 3. Estiliza o menu hambúrguer para ficar visível e acessível no mobile */
+.hamburguer {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 12px; /* Garante no mínimo 48x48px de área de toque (exigência do Lighthouse) */
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburguer span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #0d1b2a;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.socialmedia a {
+    display: inline-block;
+    padding: 10px; /* Aumenta a área de toque dos ícones sociais no celular */
+}
+
+/* Ativa o display flex do hambúrguer apenas no mobile */
+@media (max-width: 700px) {
+    .hamburguer {
+        display: flex;
+    }
+}
