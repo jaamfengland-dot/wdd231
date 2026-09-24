@@ -64,7 +64,7 @@ a {
 .botao-hero {
     position: relative;
     z-index: 2; /* Garante que o botão fique SOBRE a imagem */
-    background-color: #020b86;
+    background-color: color #ffffff;;
     color: #0d1b2a;
     padding: 15px 30px;
     font-size: 1.2rem;
