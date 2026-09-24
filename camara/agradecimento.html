@@ -9,7 +9,6 @@
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
 
     <link rel="icon" href="favicon.ico">
-
     <link rel="stylesheet" href="estilos/diretorio.css">
     <link rel="stylesheet" href="estilos/novo.css">
     
@@ -20,35 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        .caixa-sucesso {
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .caixa-sucesso h1 {
-            color: #0056b3;
-            margin-bottom: 1rem;
-        }
-        .dados-resumo {
-            background: #fff;
-            padding: 1.5rem;
-            border-left: 5px solid #0056b3;
-            margin-top: 2rem;
-        }
-        .dados-resumo p {
-            margin: 0.8rem 0;
-            font-size: 1.1rem;
-        }
-        .dados-resumo strong {
-            color: #333;
-        }
-    </style>
 </head>
 
 <body>
@@ -58,7 +28,6 @@
             <span class="titulo">ACL</span>
             <span class="subtitulo">Associação Comerciante Local</span>
         </div>
-
         <nav class="abas">
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -67,41 +36,43 @@
                 <li><a href="descobrir.html">Descobrir</a></li>
             </ul>
         </nav>
-
         <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
     </header>
 
     <main>
         <section class="caixa-sucesso">
             <h1>Obrigado por se associar!</h1>
-            <p>Seu formulário foi enviado com sucesso. Um de nossos representantes entrará em contato em breve para finalizar o processo.</p>
+            <p>Seu formulário foi recebido. Abaixo estão as informações (obrigatórias) enviadas para o nosso banco de dados:</p>
             
             <div class="dados-resumo" id="resumo-dados">
-                <!-- O JavaScript vai injetar os parágrafos aqui -->
-                <p>Carregando as informações que você enviou...</p>
+                <!-- Conteúdo inserido dinamicamente pelo JavaScript abaixo -->
             </div>
         </section>
     </main>
 
-    <!-- Script para ler a URL (método GET) e mostrar na tela -->
+    <!-- Script seguindo exatamente o método URLSearchParams do curso -->
     <script>
-        // Cria um leitor para os parâmetros da URL
-        const parametrosDaUrl = new URLSearchParams(window.location.search);
+        // Criação do objeto com a string de consulta da URL
+        const params = new URLSearchParams(window.location.search);
         
-        // Pega a div onde vamos mostrar os textos
-        const containerDoResumo = document.getElementById('resumo-dados');
+        // Extração dos parâmetros individualmente
+        const nome = params.get('nome');
+        const sobrenome = params.get('sobrenome');
+        const email = params.get('email');
+        const celular = params.get('celular');
+        const empresa = params.get('empresa');
+        const timestamp = params.get('timestamp');
 
-        // Cria o conteúdo HTML com os valores recebidos (usando .get('nome-do-campo'))
-        containerDoResumo.innerHTML = `
-            <p><strong>Nome:</strong> ${parametrosDaUrl.get('nome')} ${parametrosDaUrl.get('sobrenome')}</p>
-            <p><strong>E-mail:</strong> ${parametrosDaUrl.get('email')}</p>
-            <p><strong>Celular:</strong> ${parametrosDaUrl.get('celular')}</p>
-            <p><strong>Empresa/Organização:</strong> ${parametrosDaUrl.get('empresa')}</p>
-            <p><strong>Data/Hora de Registro:</strong> ${parametrosDaUrl.get('timestamp')}</p>
+        // Renderização na tela
+        const containerResumo = document.getElementById('resumo-dados');
+        containerResumo.innerHTML = `
+            <p><strong>Nome Completo:</strong> ${nome} ${sobrenome}</p>
+            <p><strong>E-mail:</strong> ${email}</p>
+            <p><strong>Número de Celular:</strong> ${celular}</p>
+            <p><strong>Nome da Empresa/Organização:</strong> ${empresa}</p>
+            <p><strong>Enviado em:</strong> ${timestamp}</p>
         `;
     </script>
 
@@ -113,13 +84,11 @@
             <p>contato@associaçãocomerciantelocal.org.br</p>
             <p>(15) 0028-9220</p>
         </div>
-
         <div class="socialmedia">
             <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
             <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="imagens/facebook.svg" alt="Facebook"></a>
             <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="imagens/instagram.svg" alt="Instagram"></a>
         </div>
-
         <div class="desenvolvimento">
             <p><strong>Projeto de Aula WDD 231</strong></p>
             <p>João Augusto Anselmo Moraes Ferreira</p>

@@ -90,3 +90,168 @@ a {
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
+
+/* =========================================
+   ESTILOS DA PÁGINA DE ASSOCIAÇÃO
+   ========================================= */
+.container-associacao {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Formulário e Campos */
+.formulario-box {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+form label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+form span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+form button[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+form button[type="submit"]:hover {
+    background-color: #004494;
+}
+
+/* Layout Desktop (Lado a lado) */
+@media (min-width: 768px) {
+    .container-associacao {
+        flex-direction: row;
+    }
+    .formulario-container {
+        flex: 2;
+    }
+    .cartoes-container {
+        flex: 1;
+    }
+}
+
+/* Cartões Animados (Keyframes exigidos pela atividade) */
+.cartoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.cartao-nivel {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* Estado inicial invisível para a animação */
+    opacity: 0;
+    transform: translateY(20px);
+    /* Propriedade animation abreviada conforme o curso */
+    animation: fadeInSlide 0.6s ease-out forwards;
+}
+
+.cartao-nivel:nth-child(2) { animation-delay: 0.2s; border-top: 5px solid #888; }
+.cartao-nivel:nth-child(3) { animation-delay: 0.4s; border-top: 5px solid #cd7f32; }
+.cartao-nivel:nth-child(4) { animation-delay: 0.6s; border-top: 5px solid #c0c0c0; }
+.cartao-nivel:nth-child(5) { animation-delay: 0.8s; border-top: 5px solid #ffd700; }
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cartao-nivel button.link-modal {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Modais do HTML (dialog e ::backdrop conforme a apostila) */
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Estilos Agradecimento */
+.caixa-sucesso {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.caixa-sucesso h1 {
+    color: #0056b3;
+}
+.dados-resumo {
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 5px solid #0056b3;
+    margin-top: 2rem;
+}
+.dados-resumo p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}

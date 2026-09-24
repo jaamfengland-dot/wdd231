@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ACL - Associação Comerciante Local | Início</title>
-    <meta name="description" content="Página inicial da ACL, Associação Comerciante Local de Itapeva.">
+    <title>ACL - Associação Comerciante Local | Associar-se</title>
+    <meta name="description" content="Junte-se à Associação Comerciante Local de Itapeva.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
 
     <link rel="icon" href="favicon.ico">
-
     <link rel="stylesheet" href="estilos/diretorio.css">
     <link rel="stylesheet" href="estilos/novo.css">
     
@@ -21,3 +20,182 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+<body>
+    <header>
+        <img src="imagens/logo.jpg" alt="Logo ACL">
+        <div class="titulo-grupo">
+            <span class="titulo">ACL</span>
+            <span class="subtitulo">Associação Comerciante Local</span>
+        </div>
+        <nav class="abas">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" class="ativo">Associar-se</a></li>
+                <li><a href="descobrir.html">Descobrir</a></li>
+            </ul>
+        </nav>
+        <button class="hamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="container-associacao">
+        <!-- Formulário -->
+        <section class="formulario-container">
+            <div class="formulario-box">
+                <h2>Formulário de Associação</h2>
+                <form method="get" action="agradecimento.html">
+                    <label>
+                        <span>Nome do Candidato:</span>
+                        <input type="text" name="nome" id="nome" required autocomplete="given-name" title="Preencha seu primeiro nome">
+                    </label>
+
+                    <label>
+                        <span>Sobrenome do Candidato:</span>
+                        <input type="text" name="sobrenome" id="sobrenome" required autocomplete="family-name" title="Preencha seu sobrenome">
+                    </label>
+
+                    <label>
+                        <span>Cargo na Organização:</span>
+                        <input type="text" name="cargo" id="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s\-]{7,}" title="Apenas letras, hífens ou espaços (Mínimo 7 caracteres).">
+                    </label>
+
+                    <label>
+                        <span>Endereço de E-mail:</span>
+                        <input type="email" name="email" id="email" required autocomplete="email" placeholder="exemplo@empresa.com.br" title="Preencha um endereço de e-mail válido">
+                    </label>
+
+                    <label>
+                        <span>Número de Celular:</span>
+                        <input type="tel" name="celular" id="celular" required autocomplete="tel" title="Preencha o número do seu celular">
+                    </label>
+
+                    <label>
+                        <span>Nome da Empresa/Organização:</span>
+                        <input type="text" name="empresa" id="empresa" required autocomplete="organization" title="Preencha o nome da sua empresa">
+                    </label>
+
+                    <label>
+                        <span>Nível de Associação:</span>
+                        <select name="nivel" id="nivel" required title="Escolha o nível de associação">
+                            <option value="" disabled selected>Selecione um nível...</option>
+                            <option value="np">Associação NP (Sem fins lucrativos)</option>
+                            <option value="bronze">Associação Bronze</option>
+                            <option value="silver">Associação Prata</option>
+                            <option value="gold">Associação Ouro</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Descrição da Atividade/Organização:</span>
+                        <textarea name="descricao" id="descricao" rows="4" title="Faça uma breve descrição da organização"></textarea>
+                    </label>
+
+                    <!-- Data/Hora carregada pelo usuário -->
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
+
+                    <!-- Botão conforme a instrução (button com nó de texto) -->
+                    <button type="submit">Enviar Formulário</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Cartões Laterais -->
+        <aside class="cartoes-container">
+            <h2>Níveis Disponíveis</h2>
+            
+            <div class="cartao-nivel">
+                <h3>Associação NP</h3>
+                <button type="button" class="link-modal" id="btn-np">Ver Benefícios</button>
+            </div>
+            
+            <div class="cartao-nivel">
+                <h3>Associação Bronze</h3>
+                <button type="button" class="link-modal" id="btn-bronze">Ver Benefícios</button>
+            </div>
+            
+            <div class="cartao-nivel">
+                <h3>Associação Prata</h3>
+                <button type="button" class="link-modal" id="btn-silver">Ver Benefícios</button>
+            </div>
+            
+            <div class="cartao-nivel">
+                <h3>Associação Ouro</h3>
+                <button type="button" class="link-modal" id="btn-gold">Ver Benefícios</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Modais Dialog HTML -->
+    <dialog id="modal-np">
+        <button id="fechar-np" class="fechar-modal">❌</button>
+        <h2>Benefícios NP</h2>
+        <p>A Associação NP é para organizações sem fins lucrativos e não há taxa. Inclui listagem básica no nosso diretório e eventos solidários.</p>
+    </dialog>
+
+    <dialog id="modal-bronze">
+        <button id="fechar-bronze" class="fechar-modal">❌</button>
+        <h2>Benefícios Bronze</h2>
+        <p>Inclui perfil completo no diretório online e convites para nossos eventos de networking regionais.</p>
+    </dialog>
+
+    <dialog id="modal-silver">
+        <button id="fechar-silver" class="fechar-modal">❌</button>
+        <h2>Benefícios Prata</h2>
+        <p>Todos os benefícios Bronze, além de descontos em treinamentos e publicidade em nossa newsletter mensal.</p>
+    </dialog>
+
+    <dialog id="modal-gold">
+        <button id="fechar-gold" class="fechar-modal">❌</button>
+        <h2>Benefícios Ouro</h2>
+        <p>Acesso VIP. Posições de destaque na página inicial, publicidade premium e ingressos cortesia para eventos anuais.</p>
+    </dialog>
+
+    <!-- Script de controle dos modais (MÉTODO ENSINADO NO CURSO) e do Timestamp -->
+    <script>
+        // 1. Inserir a data/hora atual no campo oculto do formulário
+        document.getElementById("timestamp").value = new Date().toLocaleString("pt-BR");
+
+        // 2. Lógica dos Modais usando addEventListener()
+        const modalNp = document.getElementById('modal-np');
+        const modalBronze = document.getElementById('modal-bronze');
+        const modalSilver = document.getElementById('modal-silver');
+        const modalGold = document.getElementById('modal-gold');
+
+        // Botões que abrem
+        document.getElementById('btn-np').addEventListener('click', () => modalNp.showModal());
+        document.getElementById('btn-bronze').addEventListener('click', () => modalBronze.showModal());
+        document.getElementById('btn-silver').addEventListener('click', () => modalSilver.showModal());
+        document.getElementById('btn-gold').addEventListener('click', () => modalGold.showModal());
+
+        // Botões que fecham
+        document.getElementById('fechar-np').addEventListener('click', () => modalNp.close());
+        document.getElementById('fechar-bronze').addEventListener('click', () => modalBronze.close());
+        document.getElementById('fechar-silver').addEventListener('click', () => modalSilver.close());
+        document.getElementById('fechar-gold').addEventListener('click', () => modalGold.close());
+    </script>
+
+    <footer>
+        <div class="contato">
+            <p><strong>ACL Câmara de Comércio</strong></p>
+            <p>Rua Carlos Nyberto, 324</p>
+            <p>Itapeva, SP 13422</p>
+            <p>contato@associaçãocomerciantelocal.org.br</p>
+            <p>(15) 0028-9220</p>
+        </div>
+        <div class="socialmedia">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="imagens/facebook.svg" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="imagens/instagram.svg" alt="Instagram"></a>
+        </div>
+        <div class="desenvolvimento">
+            <p><strong>Projeto de Aula WDD 231</strong></p>
+            <p>João Augusto Anselmo Moraes Ferreira</p>
+            <p>&copy; <span id="anoatual"></span> ACL : Associação Comerciante Local</p>
+            <p id="ultimamodificacao"></p>
+        </div>
+    </footer>
+</body>
+</html>
