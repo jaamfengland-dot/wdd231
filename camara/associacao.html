@@ -93,10 +93,8 @@
                         <textarea name="descricao" id="descricao" rows="4" title="Faça uma breve descrição da organização"></textarea>
                     </label>
 
-                    <!-- Data/Hora carregada pelo usuário -->
                     <input type="hidden" name="timestamp" id="timestamp" value="">
 
-                    <!-- Botão conforme a instrução (button com nó de texto) -->
                     <button type="submit">Enviar Formulário</button>
                 </form>
             </div>
@@ -144,7 +142,7 @@
     <dialog id="modal-silver">
         <button id="fechar-silver" class="fechar-modal">❌</button>
         <h2>Benefícios Prata</h2>
-        <p>Todos os benefícios Bronze, além de descontos em treinamentos e publicidade em nossa newsletter mensal.</p>
+        <p>Todos os benefícios Bronze, além de descontos em treinamentos e publicidade mensal.</p>
     </dialog>
 
     <dialog id="modal-gold">
@@ -153,12 +151,10 @@
         <p>Acesso VIP. Posições de destaque na página inicial, publicidade premium e ingressos cortesia para eventos anuais.</p>
     </dialog>
 
-    <!-- Script de controle dos modais (MÉTODO ENSINADO NO CURSO) e do Timestamp -->
     <script>
-        // 1. Inserir a data/hora atual no campo oculto do formulário
         document.getElementById("timestamp").value = new Date().toLocaleString("pt-BR");
 
-        // 2. Lógica dos Modais usando addEventListener()
+        // Lógica dos Modais usando addEventListener()
         const modalNp = document.getElementById('modal-np');
         const modalBronze = document.getElementById('modal-bronze');
         const modalSilver = document.getElementById('modal-silver');
@@ -179,7 +175,7 @@
 
     <footer>
         <div class="contato">
-            <p><strong>ACL Câmara de Comércio</strong></p>
+            <p><strong>ACL Câmara de Comércio Local</strong></p>
             <p>Rua Carlos Nyberto, 324</p>
             <p>Itapeva, SP 13422</p>
             <p>contato@associaçãocomerciantelocal.org.br</p>
