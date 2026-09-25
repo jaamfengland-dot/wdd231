@@ -1,7 +1,15 @@
-*{
+/* =========================================
+   RESETS E ESTILOS GLOBAIS
+   ========================================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -11,7 +19,24 @@ body {
     line-height: 1.6;
 }
 
-/* CABEÇALHO */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
 header {
     background-color: #dcdcdc;
     display: flex;
@@ -41,22 +66,43 @@ header nav.abas {
 }
 
 header nav.abas ul {
-    list-style: none;
     display: flex;
     gap: 10px;
 }
+
+/* Aqui unificamos o estilo do link do menu pra não repetir */
 header nav.abas ul li a {
     color: #0d1b2a;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    padding: 12px 15px; 
+    padding: 12px 15px;
 }
 
 header nav.abas ul li a.ativo,
 header nav.abas ul li a:hover {
     background-color: #c9c9c9;
     border-radius: 6px;
+}
+
+/* O botão hambúrguer completo e escondido por padrão */
+.hamburguer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburguer span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #0d1b2a;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 #botao-tema {
@@ -69,11 +115,9 @@ header nav.abas ul li a:hover {
     cursor: pointer;
 }
 
-.hamburguer {
-    display: none;
-}
-
-/* CONTEÚDO PRINCIPAL */
+/* =========================================
+   CONTEÚDO PRINCIPAL (MAIN) E HOME
+   ========================================= */
 main {
     max-width: 1200px;
     margin: 40px auto;
@@ -105,7 +149,6 @@ main > h1 {
 }
 
 .caixa ul {
-    list-style: none;
     padding: 18px;
 }
 
@@ -125,7 +168,17 @@ main > h1 {
     font-weight: bold;
 }
 
-/* DESTAQUES DE MEMBROS */
+/* Destaques */
+.caixa-destaques {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.caixa-destaques h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
 .destaques {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -164,7 +217,75 @@ main > h1 {
     font-size: 0.85rem;
 }
 
-/* RODAPÉ */
+.membros.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.membros.lista .cartao-membro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+}
+
+.membros.lista .cartao-membro img.foto {
+    display: none;
+}
+
+.controles-visualizacao {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Banner Hero da Home */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.7; 
+    z-index: 1;
+}
+
+.botao-hero {
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    color: #0d1b2a;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.botao-hero:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+   ========================================= */
 footer {
     background-color: #eef3f8;
     display: flex;
@@ -180,17 +301,23 @@ footer {
     gap: 12px;
 }
 
+.socialmedia a {
+    display: inline-block;
+    padding: 10px;
+}
+
 .socialmedia img {
     width: 32px;
     height: 32px;
 }
 
-/* RESPONSIVIDADE */
+/* =========================================
+   RESPONSIVIDADE GERAL
+   ========================================= */
 @media (max-width: 900px) {
     .grade-principal {
         grid-template-columns: 1fr;
     }
-
     .destaques {
         grid-template-columns: 1fr;
     }
@@ -200,11 +327,9 @@ footer {
     header nav.abas {
         display: none;
     }
-
     .hamburguer {
-        display: block;
+        display: flex;
     }
-
     footer {
         flex-direction: column;
         text-align: center;

@@ -1,101 +1,6 @@
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.membros.lista {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.membros.lista .cartao-membro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    padding: 15px;
-}
-
-.membros.lista .cartao-membro img.foto {
-    display: none;
-}
-
-/* Estilo dos controles de visualização */
-.controles-visualizacao {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* ITEM 7 e 8: Regras para a Imagem Principal (Hero) e CTA */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    background-color: #0d1b2a;
-    color: #ffffff; /* CORREÇÃO W3C: Contraste do texto sobre o fundo azul escuro */
-    overflow: hidden;
-}
-
-.hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    opacity: 0.7; 
-    z-index: 1;
-}
-
-.botao-hero {
-    position: relative;
-    z-index: 2; /* Garante que o botão fique SOBRE a imagem */
-    background-color: #ffffff; /* CORREÇÃO W3C: Remoção da palavra extra 'color' e ';' duplo */
-    color: #0d1b2a;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-.botao-hero:hover {
-    transform: scale(1.05);
-    background-color: #90e54000;
-}
-
-/* Espaçamento extra para organizar os Destaques */
-.caixa-destaques {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.caixa-destaques h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
 /* =========================================
-   ESTILOS DA PÁGINA DE ASSOCIAÇÃO
+   PÁGINA DE ASSOCIAÇÃO E FORMULÁRIO
    ========================================= */
-
 .container-associacao {
     display: flex;
     flex-direction: column;
@@ -105,45 +10,124 @@ a {
     padding: 1rem;
 }
 
-/* --- FORMULÁRIO --- */
 .formulario-box {
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 form label {
     display: block;
     margin-bottom: 1.5rem;
 }
+
 form span {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #333;
+    color: #333333;
 }
+
 form input, form select, form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
 }
+
 form button[type="submit"] {
     background-color: #0056b3;
-    color: white;
+    color: #ffffff;
     padding: 1rem 2rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    /* Aplicação de Transição simples no botão */
     transition: background-color 0.3s ease; 
 }
+
 form button[type="submit"]:hover {
     background-color: #004494;
 }
 
-/* --- LAYOUT DESKTOP --- */
+/* =========================================
+   CARTÕES DE NÍVEIS DE ASSOCIAÇÃO
+   ========================================= */
+.cartoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.cartao-nivel {
+    border: 1px solid #dddddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffffff;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cartao-nivel:nth-child(2) { animation-delay: 0.2s; border-top: 5px solid #888888; }
+.cartao-nivel:nth-child(3) { animation-delay: 0.4s; border-top: 5px solid #cd7f32; }
+.cartao-nivel:nth-child(4) { animation-delay: 0.6s; border-top: 5px solid #c0c0c0; }
+.cartao-nivel:nth-child(5) { animation-delay: 0.8s; border-top: 5px solid #ffd700; }
+
+.cartao-nivel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.cartao-nivel button.link-modal {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* =========================================
+   MODAIS (CAIXAS DE MENSAGEM - DIALOG)
+   ========================================= */
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 3rem #777777;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Responsividade específica da página de associação */
 @media (min-width: 768px) {
     .container-associacao {
         flex-direction: row;
@@ -153,128 +137,5 @@ form button[type="submit"]:hover {
     }
     .cartoes-container {
         flex: 1;
-    }
-}
-
-/* =========================================
-   CARTÕES: ANIMAÇÕES E TRANSIÇÕES 
-   ========================================= */
-.cartoes-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Definição do Keyframe  */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.cartao-nivel {
-    border: 1px solid #ddd;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    background-color: #fff;
-    
-    /*ANIMAÇÃO (Carregamento da página) */
-    opacity: 0; /* Inicia invisível */
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Mantém a opacidade 1 no final */
-    
-    /* TRANSIÇÃO (Para quando passar o mouse) */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Atraso para cada cartão aparecer um depois do outro */
-.cartao-nivel:nth-child(2) { animation-delay: 0.2s; border-top: 5px solid #888; }
-.cartao-nivel:nth-child(3) { animation-delay: 0.4s; border-top: 5px solid #cd7f32; }
-.cartao-nivel:nth-child(4) { animation-delay: 0.6s; border-top: 5px solid #c0c0c0; }
-.cartao-nivel:nth-child(5) { animation-delay: 0.8s; border-top: 5px solid #ffd700; }
-
-.cartao-nivel:hover {
-    transform: scale(1.05); /* Aumenta levemente o cartão */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.cartao-nivel button.link-modal {
-    margin-top: 1rem;
-    background: none;
-    border: none;
-    color: #0056b3;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 1rem;
-}
-/* =========================================
-   MODAIS (Dialog)
-   ========================================= */
-dialog {
-    border: 1px solid rgb(0 0 0 / 10%);
-    border-radius: .25rem;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    position: relative;
-}
-::backdrop {
-    background-color: rgb(0 0 0 / 50%);
-}
-dialog button.fechar-modal {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: .5rem 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    background: #f0f0f0;
-    cursor: pointer;
-}
-
-/* 1. Previne 100% a barra de rolagem horizontal no mobile (Critério de Design) */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
-/* 2. Garante que os links de navegação tenham boa área de toque (Critério Lighthouse - SEO/Acessibilidade) */
-header nav.abas ul li a {
-    display: inline-block;
-    padding: 12px 15px; /* Áreas de clique maiores no celular evitam punição do Lighthouse */
-}
-
-/* 3. Estiliza o menu hambúrguer para ficar visível e acessível no mobile */
-.hamburguer {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 12px; /* Garante no mínimo 48x48px de área de toque (exigência do Lighthouse) */
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.hamburguer span {
-    display: block;
-    width: 35px;
-    height: 4px;
-    background-color: #0d1b2a;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-.socialmedia a {
-    display: inline-block;
-    padding: 10px; /* Aumenta a área de toque dos ícones sociais no celular */
-}
-
-/* Ativa o display flex do hambúrguer apenas no mobile */
-@media (max-width: 700px) {
-    .hamburguer {
-        display: flex;
     }
 }
