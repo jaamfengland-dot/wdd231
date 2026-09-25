@@ -45,12 +45,12 @@ header nav.abas ul {
     display: flex;
     gap: 10px;
 }
-
 header nav.abas ul li a {
     color: #0d1b2a;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 12px;
+    display: inline-block;
+    padding: 12px 15px; 
 }
 
 header nav.abas ul li a.ativo,
