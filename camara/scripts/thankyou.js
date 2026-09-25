@@ -7,6 +7,7 @@ const sobrenome = params.get('sobrenome');
 const email = params.get('email');
 const celular = params.get('celular');
 const empresa = params.get('empresa');
+const membership = params.get('membership');        
 const timestamp = params.get('timestamp');
 
 // Renderização na tela
