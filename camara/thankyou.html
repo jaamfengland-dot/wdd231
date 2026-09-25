@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ACL - Associação Comerciante Local | Sucesso</title>
+    <title>Sucesso | ACL - Associação Comerciante Local</title>
     <meta name="description" content="Agradecemos por se registrar na ACL.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
+
+    <!-- Meta Tags Open Graph -->
+    <meta property="og:title" content="Obrigado por se associar à ACL">
+    <meta property="og:description" content="Seu formulário de associação foi enviado com sucesso.">
+    <meta property="og:image" content="https://SEU-USUARIO.github.io/wdd231/imagens/logo.jpg">
+    <meta property="og:url" content="https://SEU-USUARIO.github.io/wdd231/thankyou.html">
 
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="estilos/diretorio.css">
@@ -15,6 +21,8 @@
     <script src="scripts/obterdatas.js" defer></script>
     <script src="scripts/clima.js" defer></script>
     <script src="scripts/destaques.js" defer></script>
+    <!-- NOVO SCRIPT EXTERNO -->
+    <script src="scripts/thankyou.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +40,7 @@
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="diretorio.html">Diretório</a></li>
-                <li><a href="associacao.html" class="ativo">Associar-se</a></li>
+                <li><a href="associacao.html">Associar-se</a></li>
                 <li><a href="descobrir.html">Descobrir</a></li>
             </ul>
         </nav>
@@ -43,37 +51,15 @@
 
     <main>
         <section class="caixa-sucesso">
+            <!-- H1 já estava correto aqui -->
             <h1>Obrigado por se associar!</h1>
             <p>Seu formulário foi recebido. Abaixo estão as informações (obrigatórias) enviadas para o nosso banco de dados:</p>
             
             <div class="dados-resumo" id="resumo-dados">
-                <!-- Conteúdo inserido dinamicamente pelo JavaScript abaixo -->
+                <!-- Conteúdo inserido dinamicamente pelo JavaScript externo -->
             </div>
         </section>
     </main>
-
-    <script>
-        // Criação do objeto com a string de consulta da URL
-        const params = new URLSearchParams(window.location.search);
-        
-        // Extração dos parâmetros individualmente
-        const nome = params.get('nome');
-        const sobrenome = params.get('sobrenome');
-        const email = params.get('email');
-        const celular = params.get('celular');
-        const empresa = params.get('empresa');
-        const timestamp = params.get('timestamp');
-
-        // Renderização na tela
-        const containerResumo = document.getElementById('resumo-dados');
-        containerResumo.innerHTML = `
-            <p><strong>Nome Completo:</strong> ${nome} ${sobrenome}</p>
-            <p><strong>E-mail:</strong> ${email}</p>
-            <p><strong>Número de Celular:</strong> ${celular}</p>
-            <p><strong>Nome da Empresa/Organização:</strong> ${empresa}</p>
-            <p><strong>Enviado em:</strong> ${timestamp}</p>
-        `;
-    </script>
 
     <footer>
         <div class="contato">

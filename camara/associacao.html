@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ACL - Associação Comerciante Local | Associar-se</title>
-    <meta name="description" content="Junte-se à Associação Comerciante Local de Itapeva.">
+    <title>Associe-se | ACL - Associação Comerciante Local</title>
+    <meta name="description" content="Junte-se à Associação Comerciante Local de Itapeva e desfrute de nossos benefícios.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
+
+    <!-- Meta Tags Open Graph (Redes Sociais) exigidas -->
+    <meta property="og:title" content="Associe-se à Associação Comerciante Local">
+    <meta property="og:description" content="Junte-se à Associação Comerciante Local de Itapeva.">
+    <!-- ATENÇÃO: Troque a URL abaixo pela sua URL real do GitHub Pages -->
+    <meta property="og:image" content="https://SEU-USUARIO.github.io/wdd231/imagens/logo.jpg">
+    <meta property="og:url" content="https://SEU-USUARIO.github.io/wdd231/associacao.html">
 
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="estilos/diretorio.css">
@@ -15,6 +22,8 @@
     <script src="scripts/obterdatas.js" defer></script>
     <script src="scripts/clima.js" defer></script>
     <script src="scripts/destaques.js" defer></script>
+    <!-- NOVO SCRIPT EXTERNO QUE CRIAMOS ABAIXO -->
+    <script src="scripts/associacao.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,8 +54,10 @@
         <!-- Formulário -->
         <section class="formulario-container">
             <div class="formulario-box">
-                <h2>Formulário de Associação</h2>
-                <form method="get" action="agradecimento.html">
+                <!-- Alterado de h2 para h1 como exigido -->
+                <h1>Formulário de Associação</h1>
+                <!-- Alterado para thankyou.html -->
+                <form method="get" action="thankyou.html">
                     <label>
                         <span>Nome do Candidato:</span>
                         <input type="text" name="nome" id="nome" required autocomplete="given-name" title="Preencha seu primeiro nome">
@@ -150,28 +161,6 @@
         <h2>Benefícios Ouro</h2>
         <p>Acesso VIP. Posições de destaque na página inicial, publicidade premium e ingressos cortesia para eventos anuais.</p>
     </dialog>
-
-    <script>
-        document.getElementById("timestamp").value = new Date().toLocaleString("pt-BR");
-
-        // Lógica dos Modais usando addEventListener()
-        const modalNp = document.getElementById('modal-np');
-        const modalBronze = document.getElementById('modal-bronze');
-        const modalSilver = document.getElementById('modal-silver');
-        const modalGold = document.getElementById('modal-gold');
-
-        // Botões que abrem
-        document.getElementById('btn-np').addEventListener('click', () => modalNp.showModal());
-        document.getElementById('btn-bronze').addEventListener('click', () => modalBronze.showModal());
-        document.getElementById('btn-silver').addEventListener('click', () => modalSilver.showModal());
-        document.getElementById('btn-gold').addEventListener('click', () => modalGold.showModal());
-
-        // Botões que fecham
-        document.getElementById('fechar-np').addEventListener('click', () => modalNp.close());
-        document.getElementById('fechar-bronze').addEventListener('click', () => modalBronze.close());
-        document.getElementById('fechar-silver').addEventListener('click', () => modalSilver.close());
-        document.getElementById('fechar-gold').addEventListener('click', () => modalGold.close());
-    </script>
 
     <footer>
         <div class="contato">
