@@ -1,6 +1,3 @@
-/* =========================================
-   PÁGINA DE ASSOCIAÇÃO E FORMULÁRIO
-   ========================================= */
 .container-associacao {
     display: flex;
     flex-direction: column;
@@ -51,9 +48,6 @@ form button[type="submit"]:hover {
     background-color: #004494;
 }
 
-/* =========================================
-   CARTÕES DE NÍVEIS DE ASSOCIAÇÃO
-   ========================================= */
 .cartoes-container {
     display: flex;
     flex-direction: column;
@@ -98,9 +92,6 @@ form button[type="submit"]:hover {
     font-size: 1rem;
 }
 
-/* =========================================
-   MODAIS (CAIXAS DE MENSAGEM - DIALOG)
-   ========================================= */
 dialog {
     border: 1px solid #0000001a;
     border-radius: 0.25rem;
@@ -127,7 +118,6 @@ dialog button.fechar-modal {
     cursor: pointer;
 }
 
-/* Responsividade específica da página de associação */
 @media (min-width: 768px) {
     .container-associacao {
         flex-direction: row;
@@ -140,9 +130,6 @@ dialog button.fechar-modal {
     }
 }
 
-/* =========================================
-   PÁGINA DESCOBRIR (SOBRE)
-   ========================================= */
 .mensagem-visita {
     background-color: #0d1b2a;
     color: #0056b3;

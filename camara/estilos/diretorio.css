@@ -1,6 +1,3 @@
-/* =========================================
-   RESETS E ESTILOS GLOBAIS
-   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -34,9 +31,6 @@ a {
     text-decoration: none;
 }
 
-/* =========================================
-   CABEÇALHO E NAVEGAÇÃO
-   ========================================= */
 header {
     background-color: #dcdcdc;
     display: flex;
@@ -70,7 +64,6 @@ header nav.abas ul {
     gap: 10px;
 }
 
-/* Aqui unificamos o estilo do link do menu pra não repetir */
 header nav.abas ul li a {
     color: #0d1b2a;
     text-decoration: none;
@@ -85,7 +78,6 @@ header nav.abas ul li a:hover {
     border-radius: 6px;
 }
 
-/* O botão hambúrguer completo e escondido por padrão */
 .hamburguer {
     background-color: #00000000;
     border: none;
@@ -115,9 +107,6 @@ header nav.abas ul li a:hover {
     cursor: pointer;
 }
 
-/* =========================================
-   CONTEÚDO PRINCIPAL (MAIN) E HOME
-   ========================================= */
 main {
     max-width: 1200px;
     margin: 40px auto;
@@ -168,7 +157,6 @@ main > h1 {
     font-weight: bold;
 }
 
-/* Destaques */
 .caixa-destaques {
     margin-top: 40px;
     text-align: center;
@@ -239,8 +227,6 @@ main > h1 {
     text-align: center;
     margin-bottom: 20px;
 }
-
-/* Banner Hero da Home */
 .hero {
     position: relative;
     width: 100%;
@@ -283,9 +269,6 @@ main > h1 {
     background-color: #00000000;
 }
 
-/* =========================================
-   RODAPÉ (FOOTER)
-   ========================================= */
 footer {
     background-color: #eef3f8;
     display: flex;
@@ -311,9 +294,6 @@ footer {
     height: 32px;
 }
 
-/* =========================================
-   RESPONSIVIDADE GERAL
-   ========================================= */
 @media (max-width: 900px) {
     .grade-principal {
         grid-template-columns: 1fr;
