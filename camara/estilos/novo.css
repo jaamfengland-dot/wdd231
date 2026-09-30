@@ -139,3 +139,71 @@ dialog button.fechar-modal {
         flex: 1;
     }
 }
+/* =========================================
+   PÁGINA DESCOBRIR (SOBRE)
+   ========================================= */
+.mensagem-visita {
+    background-color: #0d1b2a;
+    color: #f6c453;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.galeria-descobrir {
+    display: grid;
+    gap: 20px;
+    /* Telas pequenas (Mobile): 1 coluna empilhada */
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "cartao1"
+        "cartao2"
+        "cartao3"
+        "cartao4"
+        "cartao5"
+        "cartao6"
+        "cartao7"
+        "cartao8";
+}
+
+.cartao-item { background-color: #fff; padding: 15px; border-radius: 8px; }
+.cartao-item:nth-child(1) { grid-area: cartao1; }
+.cartao-item:nth-child(2) { grid-area: cartao2; }
+.cartao-item:nth-child(3) { grid-area: cartao3; }
+.cartao-item:nth-child(4) { grid-area: cartao4; }
+.cartao-item:nth-child(5) { grid-area: cartao5; }
+.cartao-item:nth-child(6) { grid-area: cartao6; }
+.cartao-item:nth-child(7) { grid-area: cartao7; }
+.cartao-item:nth-child(8) { grid-area: cartao8; }
+
+/* Telas médias (Tablet) */
+@media (min-width: 641px) {
+    .galeria-descobrir {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "cartao1 cartao2"
+            "cartao3 cartao4"
+            "cartao5 cartao6"
+            "cartao7 cartao8";
+    }
+}
+
+/* Telas grandes (Desktop) */
+@media (min-width: 1025px) {
+    .galeria-descobrir {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "cartao1 cartao2 cartao3 cartao4"
+            "cartao5 cartao6 cartao7 cartao8";
+    }
+    
+    /* Efeito Hover Desktop */
+    .cartao-item img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .cartao-item img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}

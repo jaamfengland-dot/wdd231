@@ -24,6 +24,8 @@
     <script src="scripts/obterdatas.js" defer></script>
     <script src="scripts/clima.js" defer></script>
     <script src="scripts/destaques.js" defer></script>
+    <script src="scripts/associacao.js" defer></script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,50 +57,15 @@
     </header>
 
     <main>
-        <!-- Imagem Principal Responsiva e Chamada para Ação sobre ela -->
-        <section class="hero">
-            <picture>
-                <img src="imagens/hero-camara.jpg" alt="Visão da cidade de Itapeva" loading="eager" width="1200" height="400">
-            </picture>
-            <a href="associacao.html" class="botao-hero">Associe-se a ACL Hoje!</a>
-        </section>
+    <h1>Descubra Itapeva</h1>
+    
+    <!-- Área para a mensagem do LocalStorage -->
+    <div id="mensagem-visita" class="mensagem-visita"></div>
 
-        <h1>Bem-vindo à Câmara de Comércio de Itapeva</h1>
+    <div class="galeria-descobrir" id="galeria-descobrir">
+    </div>
+</main>
 
-        <div class="grade-principal">
-            <!-- Seção de Eventos Recentes -->
-            <section class="caixa eventos">
-                <h2>Eventos Recentes</h2>
-                <ul id="lista-eventos">
-                    <li><strong>15/10 - Feira de Negócios:</strong> Feirão de empresas locais.</li>
-                    <li><strong>22/10 - Workshop de Vendas:</strong> Inscrições abertas online.</li>
-                    <li><strong>05/11 - Reunião Mensal:</strong> Exclusivo para associados.</li>
-                </ul>
-            </section>
-
-            <!-- Seção de Clima via API -->
-            <section class="caixa clima">
-                <h2>Clima em Itapeva</h2>
-                <div class="clima-atual">
-                <img src="imagens/nuvem.png" alt="Condição do tempo atual" class="icone-clima" id="icone-clima-img">                    <div>
-                        <p class="temperatura" id="temperatura-atual">--°C</p>
-                        <p class="condicao" id="descricao-clima">Carregando...</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="detalhes-clima" id="previsao-3dias">
-                    <!-- Previsão dos 3 dias entra aqui -->
-                </div>
-            </section>
-        </div>
-        
-        <!-- Seção contendo de duas a três empresas em destaque -->
-        <section class="caixa-destaques">
-            <h2>Empresas em Destaque</h2>
-            <!-- O JavaScript injetará apenas 2 a 3 membros Ouro/Prata aqui -->
-            <div class="membros destaques" id="membros-destaque"></div>
-        </section>
-    </main>
 
     <footer>
         <div class="contato">
