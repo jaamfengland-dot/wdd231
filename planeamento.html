@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeamento do Site - GH3 Dicas de Lendas</title>
+    
+    <!-- CSS - Tipografia: Importação das fontes selecionadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS - Estilos Básicos e Aplicação do Esquema de Cores -->
+    <style>
+        /* Definição das cores escolhidas para o projeto */
+        :root {
+            --azul-escuro: #0B3b60;  /* Cor principal */
+            --laranja-gh: #FF7300;   /* Cor de destaque/acentos */
+            --verde-sucesso: #28a745; /* Cor secundária */
+            --fundo-pagina: #F4F7F6;
+            --texto-principal: #333333;
+        }
+
+        /* Aplicação da Tipografia (Corpo) e Cores de Fundo */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--fundo-pagina);
+            color: var(--texto-principal);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Aplicação da Tipografia (Títulos) e Cor Principal */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--azul-escuro);
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--laranja-gh); /* Uso da cor de acento */
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--verde-sucesso); /* Uso da cor secundária */
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .cenario {
+            background-color: #e9f0f5;
+            padding: 15px;
+            border-left: 4px solid var(--laranja-gh);
+            margin-bottom: 10px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Classes para demonstrar a paleta visualmente */
+        .amostra-cor {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .wireframe-box {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fafafa;
+            border: 1px dashed #ccc;
+        }
+
+        .wireframe-box img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Documento de Planeamento do Site</h1>
+    </header>
+
+    <main>
+        <!-- 1. Nome do Site -->
+        <section>
+            <h2>1. Nome do Site</h2>
+            <p><strong>Nome:</strong> GH3 Dicas de Lendas</p>
+            <p><strong>Motivo:</strong> O nome remete diretamente para o jogo Guitar Hero 3.</p>
+        </section>
+
+        <!-- 2. Finalidade do Site -->
+        <section>
+            <h2>2. Finalidade do Site</h2>
+            <p>O site funcionará como um guia de estratégias e centro de dicas para o Guitar Hero 3. Fornecerá artigos, tutoriais passo a passo e dicas práticas, incluindo guias específicos para derrotar chefes (bosses) e técnicas para facilitar o progresso nas músicas de dificuldade "Expert". O objetivo é reduzir a frustração dos jogadores e ajudá-los a superar desafios específicos.</p>
+        </section>
+
+        <!-- 3. Cenários -->
+        <section>
+            <h2>3. Cenários</h2>
+            <p>Perguntas representativas do nosso público-alvo (jogadores que procuram melhorar as suas habilidades):</p>
+            <div class="cenario">
+                <strong>Cenário 1:</strong> Qual é a melhor estratégia e o momento exato para usar os power-ups para derrotar o Lou na batalha final no modo Expert?
+            </div>
+            <div class="cenario">
+                <strong>Cenário 2:</strong> Como posicionar os dedos corretamente na guitarra para acertar a introdução rápida da música "Through the Fire and Flames"?
+            </div>
+        </section>
+
+        <!-- 4. Esquema de Cores -->
+        <section>
+            <h2>4. Esquema de Cores</h2>
+            <p>O esquema de cores foi escolhido para transmitir energia (rock) e garantir uma leitura confortável. Estas cores estão <strong>aplicadas no design deste próprio documento</strong>:</p>
+            <ul>
+                <li><span class="amostra-cor" style="background-color: #0B3b60;"></span><strong>Azul Escuro (#0B3b60):</strong> Utilizado nos cabeçalhos.</li>
+                <li><span class="amostra-cor" style="background-color: #FF7300;"></span><strong>Laranja (#FF7300):</strong> Utilizado como cor de acento linha inferior do cabeçalho, borda lateral dos cenários.</li>
+                <li><span class="amostra-cor" style="background-color: #28a745;"></span><strong>Verde Sucesso (#28a745):</strong> Utilizado no topo do documento.</li>
+            </ul>
+        </section>
+
+        <!-- 6. Tipografia -->
+        <section>
+            <h2>5. Tipografia</h2>
+            <p>A tipografia escolhida divide-se em duas fontes do Google Fonts, aplicadas neste documento:</p>
+            <ul>
+                <li><strong>Poppins:</strong> Utilizada em todos os títulos e cabeçalhos como o título principal e os títulos numerados das secções.</li>
+                <li><strong>Open Sans:</strong> Utilizada em todo o corpo do texto parágrafos, descrições e listas.</li>
+            </ul>
+        </section>
+
+        <!-- 7. Wireframes -->
+        <section>
+            <h2>6. Wireframes</h2>
+            <p>Abaixo estão os esboços preto e branco .</p>
+            
+            <div class="wireframe-box">
+                <h3>Wireframe Pequena Mobile</h3>
+                <img src="modelo.jpg" alt="Wireframe para  celular.">
+            </div>
+
+            <div class="wireframe-box">
+                <h3>Wireframe Desktop</h3>
+                <img src="desktop.jpg" alt="Wireframe para computadores ">
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
