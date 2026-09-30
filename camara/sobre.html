@@ -7,26 +7,18 @@
     
     <title>Sobre - ACL Câmara de Comércio Local</title>    
 
-    <meta name="description" content="Descubra a Câmara de Comércio Local (ACL). Associe-se para expandir seus negócios, participar de eventos e fortalecer o comércio local.">
+    <meta name="description" content="Descubra a Câmara de Comércio Local (ACL) de Itapeva. Conheça nossos pontos de interesse e fortaleça o comércio local.">
     <meta name="author" content="João Augusto Anselmo Moraes Ferreira">
-
-    <meta property="og:title" content="ACL - Câmara de Comércio Local | Início">
-    <meta property="og:description" content="Descubra a Câmara de Comércio Local (ACL). Associe-se para expandir seus negócios e fortalecer o comércio local.">
-    <meta property="og:image" content="https://jaamfengland-dot.github.io/wdd231/camara/imagens/hero-camara.jpg">
-    <meta property="og:url" content="https://jaamfengland-dot.github.io/wdd231/camara/index.html">
-    <meta property="og:type" content="website">
 
     <link rel="icon" href="favicon.ico">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="estilos/diretorio.css">
     <link rel="stylesheet" href="estilos/novo.css">
     
     <script src="scripts/obterdatas.js" defer></script>
-    <script src="scripts/clima.js" defer></script>
-    <script src="scripts/destaques.js" defer></script>
-    <script src="scripts/associacao.js" defer></script>
-    <script type="module" src="scripts/associacao.js" defer></script>
-
+   <script type="module" src="scripts/associacao.js" defer></script>
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -42,10 +34,10 @@
 
         <nav class="abas">
             <ul>
-                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="diretorio.html">Diretório</a></li>
                 <li><a href="associacao.html">Associar-se</a></li>
-                <li><a href="sobre.html">Descobrir</a></li>
+                <li><a href="sobre.html" class="ativo">Descobrir</a></li>
             </ul>
         </nav>
 
@@ -57,15 +49,14 @@
     </header>
 
     <main>
-    <h1>Descubra Itapeva</h1>
-    
-    <!-- Área para a mensagem do LocalStorage -->
-    <div id="mensagem-visita" class="mensagem-visita"></div>
+        <h1>Descubra Itapeva</h1>
+        
+        <!-- Mensagem de Boas vindas ou retorno -->
+        <div id="mensagem-visita" class="mensagem-visita"></div>
 
-    <div class="galeria-descobrir" id="galeria-descobrir">
-    </div>
-</main>
-
+        <!-- A galeria vazia onde o JavaScript vai criar os 8 cartões -->
+        <div class="galeria-descobrir" id="galeria-descobrir"></div>
+    </main>
 
     <footer>
         <div class="contato">
@@ -77,9 +68,9 @@
         </div>
 
         <div class="socialmedia">
-             <a href="https://linkedin.com" target="_blank" aria-label="Acessar LinkedIn"><img src="imagens/linkedin.svg" alt="Página do LinkedIn da Câmara de Comércio"></a>
-             <a href="https://facebook.com" target="_blank" aria-label="Acessar Facebook"><img src="imagens/facebook.svg" alt="Página do Facebook da Câmara de Comércio"></a>
-             <a href="https://instagram.com" target="_blank" aria-label="Acessar Instagram"><img src="imagens/instagram.svg" alt="Página do Instagram da Câmara de Comércio"></a>
+             <a href="https://linkedin.com" target="_blank" aria-label="Acessar LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+             <a href="https://facebook.com" target="_blank" aria-label="Acessar Facebook"><img src="imagens/facebook.svg" alt="Facebook"></a>
+             <a href="https://instagram.com" target="_blank" aria-label="Acessar Instagram"><img src="imagens/instagram.svg" alt="Instagram"></a>
         </div>
 
         <div class="desenvolvimento">
