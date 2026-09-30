@@ -5,92 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeamento do Site - GH3 Dicas de Lendas</title>
     
-    <!-- CSS - Tipografia: Importação das fontes selecionadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS - Estilos Básicos e Aplicação do Esquema de Cores -->
-    <style>
-        /* Definição das cores escolhidas para o projeto */
-        :root {
-            --azul-escuro: #0B3b60;  /* Cor principal */
-            --laranja-gh: #FF7300;   /* Cor de destaque/acentos */
-            --verde-sucesso: #28a745; /* Cor secundária */
-            --fundo-pagina: #F4F7F6;
-            --texto-principal: #333333;
-        }
+   <style>
+    /* 1. Aplicação da Tipografia do Corpo e Cor de Fundo */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #F4F7F6;
+        color: #333333;
+        margin: 20px;
+    }
 
-        /* Aplicação da Tipografia (Corpo) e Cores de Fundo */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--fundo-pagina);
-            color: var(--texto-principal);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+    /* 2. Aplicação da Tipografia dos Títulos e da Cor Principal (Azul Escuro) */
+    h1, h2, h3 {
+        font-family: 'Poppins', sans-serif;
+        color: #0B3b60; 
+    }
 
-        /* Aplicação da Tipografia (Títulos) e Cor Principal */
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--azul-escuro);
-        }
+    /* 3. Cabeçalho com detalhe na Cor de Acento (Laranja) */
+    header {
+        border-bottom: 4px solid #FF7300;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
 
-        header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--laranja-gh); /* Uso da cor de acento */
-        }
+    /* 4. Área principal com detalhe na Cor Secundária (Verde) */
+    main {
+        max-width: 800px;
+        background-color: white;
+        padding: 20px;
+        border-top: 4px solid #28a745;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--verde-sucesso); /* Uso da cor secundária */
-        }
+    /* 5. Destaque simples para os cenários (Laranja) */
+    .cenario {
+        background-color: #e9f0f5;
+        padding: 10px;
+        border-left: 4px solid #FF7300;
+        margin-bottom: 15px;
+    }
 
-        section {
-            margin-bottom: 40px;
-        }
+    /* 6. Quadrados pequenos para mostrar as cores na seção 4 */
+    .amostra-cor {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #000;
+        margin-right: 5px;
+    }
 
-        .cenario {
-            background-color: #e9f0f5;
-            padding: 15px;
-            border-left: 4px solid var(--laranja-gh);
-            margin-bottom: 10px;
-            border-radius: 0 4px 4px 0;
-        }
-
-        /* Classes para demonstrar a paleta visualmente */
-        .amostra-cor {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .wireframe-box {
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fafafa;
-            border: 1px dashed #ccc;
-        }
-
-        .wireframe-box img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin-top: 10px;
-        }
-    </style>
+    /* 7. Garante que as imagens dos wireframes não quebrem a tela */
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+</style>
 </head>
 <body>
 
