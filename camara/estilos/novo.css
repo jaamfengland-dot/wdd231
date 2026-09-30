@@ -14,7 +14,7 @@
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 form label {
@@ -85,12 +85,12 @@ form button[type="submit"]:hover {
 
 .cartao-nivel:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px #00000033;
 }
 
 .cartao-nivel button.link-modal {
     margin-top: 1rem;
-    background-color: transparent;
+    background-color: #00000000;
     border: none;
     color: #0056b3;
     text-decoration: underline;
@@ -102,7 +102,7 @@ form button[type="submit"]:hover {
    MODAIS (CAIXAS DE MENSAGEM - DIALOG)
    ========================================= */
 dialog {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #0000001a;
     border-radius: 0.25rem;
     padding: 2rem;
     background-color: #ffffff;
@@ -114,7 +114,7 @@ dialog {
 }
 
 ::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
 }
 
 dialog button.fechar-modal {
@@ -122,7 +122,7 @@ dialog button.fechar-modal {
     top: 15px;
     right: 15px;
     padding: 0.5rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #0000001a;
     background-color: #f0f0f0;
     cursor: pointer;
 }
@@ -139,6 +139,7 @@ dialog button.fechar-modal {
         flex: 1;
     }
 }
+
 /* =========================================
    PÁGINA DESCOBRIR (SOBRE)
    ========================================= */
@@ -167,7 +168,12 @@ dialog button.fechar-modal {
         "cartao8";
 }
 
-.cartao-item { background-color: #fff; padding: 15px; border-radius: 8px; }
+.cartao-item { 
+    background-color: #fff; 
+    padding: 15px; 
+    border-radius: 8px; 
+}
+
 .cartao-item:nth-child(1) { grid-area: cartao1; }
 .cartao-item:nth-child(2) { grid-area: cartao2; }
 .cartao-item:nth-child(3) { grid-area: cartao3; }

@@ -87,7 +87,7 @@ header nav.abas ul li a:hover {
 
 /* O botão hambúrguer completo e escondido por padrão */
 .hamburguer {
-    background-color: transparent;
+    background-color: #00000000;
     border: none;
     cursor: pointer;
     padding: 12px;
@@ -275,12 +275,12 @@ main > h1 {
     font-weight: bold;
     border-radius: 5px;
     transition: transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px #0000004d;
 }
 
 .botao-hero:hover {
     transform: scale(1.05);
-    background-color: transparent;
+    background-color: #00000000;
 }
 
 /* =========================================
