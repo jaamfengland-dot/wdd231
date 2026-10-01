@@ -23,55 +23,55 @@ if (divMensagem) {
 }
 
 // ==========================================
-// 2. DADOS DOS MEMBROS (COLOCADOS DIRETO AQUI PARA NÃO FALHAR)
+// 2. DADOS DOS MEMBROS
 // ==========================================
 const membrosDeInteresse = [
   {
     "nome": "Tech Pablo",
     "endereco": "Rua São Paulo, 125, Centro, Itapeva - SP",
-    "imagem": "tech-pablo.webp",
-    "descricao": "Empresa especializada em desenvolvimento de sites e soluções digitais."
+    "imagem": "tech-pablo.jpg",
+    "descricao": "Empresa especializada em desenvolvimento de sites, sistemas e soluções digitais."
   },
   {
     "nome": "Mercado Bom Preço",
     "endereco": "Avenida Carlos Marques, 450, Centro, Itapeva - SP",
-    "imagem": "mercado-bom-preco.webp",
+    "imagem": "mercado-bom-preco.jpg",
     "descricao": "Mercado local com produtos alimentícios, bebidas e itens para o dia a dia."
   },
   {
     "nome": "Construtora Santos",
     "endereco": "Rua Minas Gerais, 780, Jardim Europa, Itapeva - SP",
-    "imagem": "construtora-santos.webp",
+    "imagem": "construtora-santos.jpg",
     "descricao": "Empresa especializada em construção, reformas e projetos residenciais."
   },
   {
     "nome": "Auto Center",
     "endereco": "Rua Paraná, 310, Jardim Maringá, Itapeva - SP",
-    "imagem": "auto-center.webp",
+    "imagem": "auto-center.jpg",
     "descricao": "Oficina especializada em manutenção, revisão e serviços automotivos."
   },
   {
     "nome": "Padaria Pão Dourado",
     "endereco": "Rua Bahia, 210, Centro, Itapeva - SP",
-    "imagem": "padaria-pao-dourado.webp",
+    "imagem": "padaria-pao-dourado.jpg",
     "descricao": "Padaria artesanal com pães, doces e salgados feitos diariamente."
   },
   {
     "nome": "Clínica Vida Saudável",
     "endereco": "Avenida Brasil, 560, Jardim Primavera, Itapeva - SP",
-    "imagem": "clinica-vida-saudavel.webp",
-    "descricao": "Clínica médica com atendimento em clínica geral e exames de rotina."
+    "imagem": "clinica-vida-saudavel.jpg",
+    "descricao": "Clínica médica com atendimento em clínica geral, pediatria e exames de rotina."
   },
   {
     "nome": "Studio Fit Academia",
     "endereco": "Rua Goiás, 88, Vila Nova, Itapeva - SP",
-    "imagem": "studio-fit.webp",
-    "descricao": "Academia completa com musculação e acompanhamento profissional."
+    "imagem": "studio-fit.jpg",
+    "descricao": "Academia completa com musculação, aulas coletivas e acompanhamento profissional."
   },
   {
     "nome": "Praça de Eventos",
     "endereco": "Praça Matriz, S/N, Centro, Itapeva - SP",
-    "imagem": "praca-eventos.webp",
+    "imagem": "logo.jpg",
     "descricao": "Ponto de encontro da cidade e palco das principais feiras de comércio local."
   }
 ];
