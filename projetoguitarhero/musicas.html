@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Músicas Difíceis | GH3 Dicas de Lendas</title>
-    <meta name="description" content="Dicas para vencer as músicas mais difíceis do Guitar Hero 3 no modo Expert, como Through the Fire and Flames.">
-    <link rel="icon" href="imagens/favicon.png" type="image/png">
+    <title>Músicas Difíceis - GH3 Dicas de Lendas</title>
+    <meta name="description" content="Lista interativa de músicas difíceis do Guitar Hero 3 com filtros e dicas.">
+    <link rel="icon" href="imagens/favicon.ico" type="image/ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -14,71 +14,49 @@
 <body>
     <header>
         <a class="marca" href="index.html">
-            <img src="imagens/favicon.ico" alt="Logotipo do GH3 Dicas de Lendas" width="48" height="48">
+            <img src="imagens/favicon.ico" alt="Logotipo" width="48" height="48">
             <span>GH3 Dicas de Lendas</span>
         </a>
-        <nav aria-label="Menu principal">
+        <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <nav id="menu-principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="chefes.html">Guias de Chefes</a></li>
                 <li><a href="musicas.html" aria-current="page">Músicas Difíceis</a></li>
                 <li><a href="dicas.html">Dicas Gerais</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="sobre.html">sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Músicas Difíceis</h1>
-        <p class="introducao">Algumas músicas do modo Expert pedem mais do que reflexo: exigem prática e uma boa posição das mãos. Veja como encarar as mais temidas.</p>
+        <h1>Músicas Mais Difíceis</h1>
+        <p class="introducao">Filtre as músicas por nível de dificuldade e clique em qualquer card para ver a dica detalhada e favoritar.</p>
 
-        <section class="musicas">
-            <article class="musica">
-                <h2>Through the Fire and Flames</h2>
-                <p>A introdução rápida é onde a maioria dos jogadores desiste. A posição dos dedos faz toda a diferença.</p>
-                <ul>
-                    <li>Deixe os dedos curvados e perto dos botões, sem levantá-los demais.</li>
-                    <li>Use os ligados (hammer-ons e pull-offs) em vez de bater cada nota.</li>
-                    <li>Treine só a introdução em velocidade baixa e aumente aos poucos.</li>
-                </ul>
-            </article>
+        <!-- Botões de filtro -->
+        <div class="filtros" style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <button class="btn-filtro" data-filtro="todos">Todas</button>
+            <button class="btn-filtro" data-filtro="Fácil">Fácil</button>
+            <button class="btn-filtro" data-filtro="Média">Média</button>
+            <button class="btn-filtro" data-filtro="Difícil">Difícil</button>
+            <button class="btn-filtro" data-filtro="Extrema">Extrema</button>
+        </div>
 
-            <article class="musica">
-                <h2>One</h2>
-                <p>Exige resistência e atenção às mudanças de ritmo ao longo da música.</p>
-                <ul>
-                    <li>Mantenha a mão relaxada para não cansar no final.</li>
-                    <li>Aprenda as partes lentas e as rápidas separadamente.</li>
-                </ul>
-            </article>
+        <!-- Onde os 15 cards serão lançados -->
+        <div id="container-musicas" class="musicas"></div>
 
-            <article class="musica">
-                <h2>Raining Blood</h2>
-                <p>Muito rápida e repetitiva, pede um ritmo constante da mão que bate as notas.</p>
-                <ul>
-                    <li>Bata as notas de forma curta e leve, sem força.</li>
-                    <li>Use o Star Power nas partes mais densas para segurar a pontuação.</li>
-                </ul>
-            </article>
-
-            <article class="musica">
-                <h2>Cliffs of Dover</h2>
-                <p>Tem muitas sequências de ligados e trechos longos sem pausa.</p>
-                <ul>
-                    <li>Confie nos ligados e não tente bater todas as notas.</li>
-                    <li>Memorize onde ficam os trechos do Star Power.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="como-funciona">
-            <h2>Dicas para qualquer música difícil</h2>
-            <ul>
-                <li>Pratique por partes no modo de treino antes de tentar a música inteira.</li>
-                <li>Comece em velocidade menor e só aumente quando errar pouco.</li>
-                <li>Faça pausas curtas para não forçar a mão.</li>
-            </ul>
-        </section>
+        <!-- Diálogo Modal -->
+        <dialog id="modal-musica" style="border: none; border-radius: 8px; padding: 2rem; max-width: 400px; background-color: var(--branco);">
+            <h2 id="modal-titulo" style="margin-top: 0; color: var(--azul);"></h2>
+            <p><strong>Banda:</strong> <span id="modal-banda"></span></p>
+            <p><strong>Dificuldade:</strong> <span id="modal-dificuldade"></span></p>
+            <p><strong>Dica de Ouro:</strong> <span id="modal-dica"></span></p>
+            
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button id="btn-favorito" style="padding: 0.5rem 1rem; background-color: var(--laranja); color: white; border: none; border-radius: 4px; cursor: pointer;">⭐ Favoritar</button>
+                <button id="modal-fechar" style="padding: 0.5rem 1rem; background-color: var(--azul); color: white; border: none; border-radius: 4px; cursor: pointer;">Fechar</button>
+            </div>
+        </dialog>
     </main>
 
     <footer>
@@ -86,15 +64,11 @@
             <p>Projeto Final WDD 231</p>
             <p>João Augusto Anselmo Moraes Ferreira</p>
             <p>&copy; <span id="ano"></span> GH3 Dicas de Lendas</p>
-            <p>Última modificação: <span id="ultima-modificacao"></span></p>
-        </div>
-        <div class="redes">
-            <a href="https://www.facebook.com" aria-label="Facebook"><img src="imagens/facebook.svg" alt="" width="40" height="40"></a>
-            <a href="https://www.instagram.com" aria-label="Instagram"><img src="imagens/instagram.svg" alt="" width="40" height="40"></a>
-            <a href="https://www.linkedin.com" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="" width="40" height="40"></a>
         </div>
     </footer>
 
     <script src="scripts/rodape.js"></script>
+    <!-- type="module" ativa o ES Modules exigidos na atividade -->
+    <script type="module" src="scripts/musicas.js"></script>
 </body>
 </html>

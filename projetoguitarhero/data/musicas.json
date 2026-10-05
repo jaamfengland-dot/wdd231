@@ -1,0 +1,92 @@
+[
+  {
+    "nome": "Through the Fire and Flames",
+    "banda": "DragonForce",
+    "dificuldade": "Extrema",
+    "dica": "Mantenha o ritmo no tapete de notas e use o Star Power nas partes mais lentas."
+  },
+  {
+    "nome": "The Devil Went Down to Georgia",
+    "banda": "Steve Ouimette",
+    "dificuldade": "Extrema",
+    "dica": "Divida os solos de duelo em seções e pratique a troca rápida de dedos."
+  },
+  {
+    "nome": "Raining Blood",
+    "banda": "Slayer",
+    "dificuldade": "Difícil",
+    "dica": "Cuidado com a sequência rápida de notas repetidas; faça a técnica de dois dedos."
+  },
+  {
+    "nome": "One",
+    "banda": "Metallica",
+    "dificuldade": "Difícil",
+    "dica": "A introdução é lenta, mas o final (solo de tapping) exige precisão cirúrgica."
+  },
+  {
+    "nome": "Cliffs of Dover",
+    "banda": "Eric Johnson",
+    "dificuldade": "Extrema",
+    "dica": "Fique atento ao ritmo irregular das notas marteladas (hammer-ons)."
+  },
+  {
+    "nome": "Cult of Personality",
+    "banda": "Living Colour",
+    "dificuldade": "Difícil",
+    "dica": "O solo inicial pega muita gente desprevenida. Memorize o padrão de cores."
+  },
+  {
+    "nome": "The Metal",
+    "banda": "Tenacious D",
+    "dificuldade": "Média",
+    "dica": "Ótima música para treinar acordes seguidos de notas soltas."
+  },
+  {
+    "nome": "Barracuda",
+    "banda": "Heart",
+    "dificuldade": "Média",
+    "dica": "A sincronia da palhetada para baixo é essencial para não perder o combo."
+  },
+  {
+    "nome": "Bulls on Parade",
+    "banda": "Rage Against the Machine",
+    "dificuldade": "Difícil",
+    "dica": "Preste atenção no uso do whammy bar nas notas longas para ganhar Star Power extra."
+  },
+  {
+    "nome": "Suck My Kiss",
+    "banda": "Red Hot Chili Peppers",
+    "dificuldade": "Média",
+    "dica": "Ritmo constante e animado; excelente para manter o multiplicador em 4x."
+  },
+  {
+    "nome": "Knights of Cydonia",
+    "banda": "Muse",
+    "dificuldade": "Difícil",
+    "dica": "A parte final é uma verdadeira maratona de notas contínuas. Guarde Star Power."
+  },
+  {
+    "nome": "Pride and Joy",
+    "banda": "Stevie Ray Vaughan",
+    "dificuldade": "Difícil",
+    "dica": "Estilo blues com notas rápidas alternadas. O shuffle vai exigir treino."
+  },
+  {
+    "nome": "Cherub Rock",
+    "banda": "Smashing Pumpkins",
+    "dificuldade": "Fácil",
+    "dica": "Ideal para iniciantes entenderem o timing dos acordes básicos."
+  },
+  {
+    "nome": "When You Were Young",
+    "banda": "The Killers",
+    "dificuldade": "Fácil",
+    "dica": "Foque em acertar as notas sustentadas para garantir o acerto das frases."
+  },
+  {
+    "nome": "Paint It Black",
+    "banda": "The Rolling Stones",
+    "dificuldade": "Média",
+    "dica": "O refrão tem notas rápidas que exigem uso correto do dedinho (botão laranja)."
+  }
+]
