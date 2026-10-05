@@ -123,7 +123,7 @@ h2 {
 
 .proposito p {
     background-color: var(--cinza-claro);
-    border-left: 6px solid var(--laranja);
+    border-left: 6px solid var(--verde);
     border-radius: 8px;
     padding: 1rem;
     margin: 0 auto;
@@ -191,7 +191,7 @@ h2 {
     border-color: var(--laranja);
 }
 
-/* Páginas Guias de Chefes e Músicas Difíceis */
+/* Páginas Guias de Chefes, Músicas Difíceis, Dicas Gerais  e sobre*/
 .introducao {
     max-width: 60ch;
     margin: 0 auto 1.5rem;
@@ -203,6 +203,7 @@ h2 {
     margin: 0 auto;
 }
 
+.sobre ul,
 .como-funciona ul,
 .chefe ul,
 .musica ul {
@@ -210,6 +211,7 @@ h2 {
     padding-left: 1.5rem;
 }
 
+.sobre ul,
 .como-funciona li,
 .chefe li,
 .musica li {
@@ -217,22 +219,45 @@ h2 {
 }
 
 .chefes,
-.musicas {
+.musicas,
+.sobre ul,
+.dicas {
     display: grid;
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
 .chefe,
-.musica {
+.musica,
+.dica,
+.sobre ul {
     background-color: var(--cinza-claro);
-    border-left: 6px solid var(--laranja);
+    border-left: 6px solid;
     border-radius: 8px;
     padding: 1rem;
 }
 
+.chefe {
+    border-left-color: var(--vermelho);
+}
+
+.musica {
+    border-left-color: var(--amarelo);
+}
+
+.dica {
+    border-left-color: var(--azul);
+}
+
+.sobre ul {
+    border-left-color: var(--laranja);
+}
+
+
 .chefe h2,
-.musica h2 {
+.musica h2,
+.sobre ul,
+.dica h2 {
     text-align: left;
     margin-top: 0;
 }
@@ -285,7 +310,8 @@ footer p {
         object-fit: cover;
     }
 
-    .chefes {
+    .chefes,
+    .dicas {
         grid-template-columns: repeat(3, 1fr);
     }
 
