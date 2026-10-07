@@ -30,7 +30,7 @@ a {
 }
 
 a:focus-visible {
-    outline: 3px solid var(--laranja);
+    outline: 3px solid var(--texto);
     outline-offset: 2px;
 }
 
