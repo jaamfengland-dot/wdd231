@@ -50,7 +50,7 @@ ul {
 header {
     background-color: var(--azul);
     color: var(--branco);
-    border-bottom: 4px solid var(--laranja);
+    border-bottom: 4px solid var(--texto);
     padding: 1rem;
     text-align: center;
 }
