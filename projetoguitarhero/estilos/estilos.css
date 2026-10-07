@@ -265,7 +265,7 @@ h2 {
 /* Rodapé */
 footer {
     background-color: var(--cinza-claro);
-    border-top: 4px solid var(--laranja);
+    border-top: 4px solid var(--texto);
     padding: 1rem;
     display: flex;
     flex-direction: column;
